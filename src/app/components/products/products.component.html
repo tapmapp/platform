@@ -1,0 +1,136 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 products-filter">
+    <filter-menu [filterOptions]="filterOptions"></filter-menu>
+</section>
+
+<section class="col-md-10 products">
+
+    <div class="chart-content">
+        <div class="chart">
+            <google-chart [data]="columnChartData"></google-chart>
+        </div>
+
+        <div class="chart2">
+            <google-chart [data]="pieChartData"></google-chart>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="col-md-9 box">
+            <div class="title-content">
+                <ul>
+                    <li class="title">Products
+                        <a routerLink="/products/add-product" class="add"><i class="fa fa-plus" aria-hidden="true"></i> Add</a>
+                        <span class="edit" (click)="editProduct()" [ngClass]="{'active': editState}"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
+                        <span class="delete" (click)="deleteProduct()" [ngClass]="{'active': deleteState}"><i class="fa fa-trash" aria-hidden="true"></i> Delete</span>
+                    </li>     
+                </ul>
+            </div>
+            <div class="product-cont">
+                <div class="title">
+                    <div class="name">
+                        Product <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="brand">
+                        Brand <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="categorie">
+                        Category <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    
+                    <div class="acq-price">
+                        Acq. <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="sale-price">
+                        Price <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="profit">
+                        Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="units">
+                        Units <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="exp-date">
+                        Exp. Date <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="rate">
+                        Rate <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="list" *ngFor="let product of products | filterProductsByPipe: [filterConfig.storeId, filterConfig.categoryId, searchedProduct]; let i = index" [ngClass]="{'delete': deleteState, 'edit': editState, 'active': activeState }">
+                    <div class="name">
+                        <span>{{ product.name }}, {{ product.size }}</span>
+                        <!--<input type="text" [ngModel]="product.name" [readonly]="true" (focusout)="updateProductOnFocusOut(product)">-->
+                    </div>
+                    <div class="brand">
+                        <span>{{ product.brandName }}</span>
+                        <!--<input type="text" [ngModel]="product.brandName" [readonly]="true" (focusout)="updateProductOnFocusOut(product)">-->
+                    </div>
+                    <div class="categorie" [ngClass]="{ active: listStates[i].category }">
+                        <div class="selected-category-cont" (click)="editProductShowHideCategories(i)">
+                            <span>{{ product.category.name }}</span>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="options-cont">
+                            <div class="options" *ngFor="let category of categories" (click)="editProductSelectCategory(category.name)">{{ category.name }}</div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="lot" [ngClass]="{ active: listStates[i].lot }">
+                        <div class="active-lot-cont"  (click)="editProductShowHideLots(i)">
+                            <span>
+                                <span>{{ product.lot[lotIndex].name }}</span>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="options-lot">
+                            <div class="options" *ngFor="let lot of product.lot" (click)="editProductSelectLot(lot.name)">{{ lot.name }}</div>
+                        </div>
+                    </div>-->
+                    <div class="acq-price">
+                        <input type="number" min="0" [(ngModel)]="product.lot[lotIndex].acqPrice" [readonly]="!editState" (focusout)="updateProductOnFocusOut(product)">
+                    </div>
+                    <div class="sale-price">
+                        <input type="number" min="0" [(ngModel)]="product.lot[lotIndex].salePrice" [readonly]="!editState" (focusout)="updateProductOnFocusOut(product)">
+                    </div>
+                    <div class="profit">
+                        <span *ngIf=" product.lot[lotIndex].salePrice - product.lot[lotIndex].acqPrice >= 0">
+                            {{ (product.lot[lotIndex].salePrice - product.lot[lotIndex].acqPrice).toFixed(2) }}
+                        </span>
+                        <span *ngIf=" product.lot[lotIndex].salePrice - product.lot[lotIndex].acqPrice < 0">
+                            0
+                        </span>
+                    </div>
+                    <div class="units">
+                        <input type="number" min="0" [(ngModel)]="product.lot[lotIndex].units" [readonly]="!editState" (focusout)="updateProductOnFocusOut(product)">
+                    </div>
+                    <div class="exp-date">
+                        <input type="date" [ngModel]="product.lot[lotIndex].expDate | date:'yyyy-MM-dd'" [readonly]="!editState" (focusout)="updateProductOnFocusOut(product)">
+                    </div>
+                    <div class="rate">
+                        stars
+                        <!--
+                        <i class="fa fa-star ilu" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [product.rate]"></i>
+                        <i class="fa fa-star" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [5 - product.rate]"></i>-->
+                    </div>
+                </div>    
+
+            </div>
+        </div>
+        <div class="col-md-3 box categories">
+            <div class="title-content">
+                <ul>
+                    <li class="title">Categories 
+                        <span class="add"><i class="fa fa-plus" aria-hidden="true"></i> Add</span>
+                        <!-- <span class="delete"><i class="fa fa-minus" aria-hidden="true"></i> Delete</span> -->
+                    </li>     
+                </ul>
+            </div>
+            <div class="box-content">
+                <categories-list></categories-list>
+            </div>
+        </div>
+    </div>
+
+</section>

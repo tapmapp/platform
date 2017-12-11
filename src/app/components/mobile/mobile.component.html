@@ -1,0 +1,184 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 mobile">
+    <div class="row content">
+        <div class="col-md-7 campaign-info">
+            <h2><!--<i class="fa fa-mobile" aria-hidden="true"></i>--> Mobile Campaign</h2>
+            <h3 class="first"><i class="fa fa-calendar" aria-hidden="true"></i> Period</h3>
+            <ul>
+                <li>
+                    <label>Start Date:</label>
+                    <br/>
+                    <input type="date" [ngModel]="campaignInfo.startDate | date:'yyyy-MM-dd'" onkeydown="return false" (ngModelChange)="selectFromDate($event)">
+                </li>
+                <li>
+                    <label>End Date:</label>
+                    <br/>
+                    <input type="date" [ngModel]="campaignInfo.endDate | date:'yyyy-MM-dd'" onkeydown="return false" (ngModelChange)="selectFromDate($event)">
+                </li>
+            </ul>
+            <h3><i class="fa fa-info" aria-hidden="true"></i> General Information</h3>
+            <ul>
+                <li>
+                    <label>Campaign Name:</label>
+                    <br/>
+                    <input type="text" ([ngModel])="campaignInfo.campaignName"/>
+                </li>
+                <li>
+                    <label>Campaign Title:</label>
+                    <br/>
+                    <input type="text" ([ngModel])="campaignInfo.campaignTitle"/>
+                </li>
+                <li class="campaign-type">
+                    <label>Campaign Type:</label>
+                    <br/>
+                    <div class="display-cont">
+                        <div class="selected-option" (click)="showHideCampaignType()">{{ selectedCampaign }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: campaignState }">
+                            <div class="options" (click)="selectCampaign('advertising', 'Advertising')">Advertising</div>
+                            <div class="options" (click)="selectCampaign('discount', 'Discount')">Discount</div>
+                            <div class="options" (click)="selectCampaign('twoxone', '2 x 1')">2 x 1</div>
+                            <div class="options" (click)="selectCampaign('threextwo', '3 x 2')">3 x 2</div>
+                            <div class="options" (click)="selectCampaign('combo', 'Combo')">Combo</div>
+                        </div>
+                    </div>
+                </li>
+                <li class="desc">
+                    <label>Campaign Description: (140 char)</label>
+                    <br/>
+                    <textarea ([ngModel])="campaignInfo.campaignDesc"></textarea>
+                </li>
+            </ul>
+
+            <h3><i class="fa fa-cube" aria-hidden="true"></i> Products</h3>
+            <ul class="add-product-cont">
+                <li>
+                    <div class="display-cont">    
+                        <div class="selected-option" (click)="showHideCategories()">{{ selectedCategory }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: categoryState }">
+                            <div class="options" (click)="selectCategory('All Categories', '')">All Categories</div>
+                            <div class="options" *ngFor="let category of categories" (click)="selectCategory(category.name, category._id)">{{ category.name }}</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="display-cont">
+                        <div class="selected-option" (click)="showHideProducts()">{{ selectedProduct }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: productState }">
+                            <div class="options" *ngFor="let product of products" (click)="selectProduct(product.name + '-' + product.brandName, product.productId)">{{ product.name + ' - ' + product.brandName }}</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" id="" [(ngModel)]="productSearch" placeholder="Name, Brand, ..." (ngModelChange)="productSearchChange($event)">
+                    </div>
+                </li>
+            </ul>
+            <div class="added-products" *ngIf="addedProducts.length == 0">
+                0 products added
+            </div>
+            <div class="added-products" *ngIf="addedProducts.length > 0">
+                <ul class="title">
+                    <li>
+                        Product
+                    </li>
+                    <li>
+                        Category
+                    </li>
+                    <li>
+                        Acq. Price
+                    </li>
+                    <li>
+                        Price
+                    </li>
+                    <li>
+                        Profit
+                    </li>
+                </ul>
+                <ul class="product" *ngFor="let addedProduct of addedProducts">
+                    <li>
+                        {{ addedProduct.name }}
+                    </li>
+                    <li>
+                        {{ addedProduct.category }}
+                    </li>
+                    <li>
+                        {{ addedProduct.acqPrice }}
+                    </li>
+                    <li>
+                        {{ addedProduct.price }}
+                    </li>
+                    <li>
+                        {{ addedProduct.profit }}
+                    </li>
+                </ul>
+            </div>
+
+            <h3><i class="fa fa-paint-brush" aria-hidden="true"></i> Design</h3>
+            <ul class="design-cont">
+                <li>
+                    <label>Background Image:</label>
+                    <br/>
+                    <div class="select-file" (click)="selectFile()">
+                        <i class="fa fa-file-image-o" aria-hidden="true"></i> Select File
+                        <input type="file" (change)="fileChange($event)" accept=".png,.jpg,.jpeg">
+                    </div>
+                </li>
+                <li class="preview">
+                    <div></div>
+                    <label>Preview</label>
+                </li>
+            </ul>
+
+            <ul class="target-avaible-cont">
+                <li>
+                    <h3><i class="fa fa-bullseye" aria-hidden="true"></i> Target</h3>
+                    <div class="display-cont">
+                        <div class="selected-option" (click)="showHideClientsList()">{{ selectedClientsList }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: clientsListState }">
+                            <div class="options" *ngFor="let clientsList of clientsLists" (click)="selectClientsList(clientsList.name, clientsList._id)"> {{ clientsList.name }} <span>({{ clientsList.number }})</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h3><i class="fa fa-map-marker" aria-hidden="true"></i> Availability</h3>
+                    <div class="display-cont">
+                        <div class="selected-option" (click)="showHideStores()">{{ selectedStore }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: storeState }">
+                            <div class="options" *ngFor="let store of stores" (click)="addStore(store.name, store._id)"> {{ store.name }} </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="create-campaign">
+                <span>Create Campaign</span>
+            </div>
+        </div>
+        <div class="col-md-3 col-md-offset-1 mobile-box">
+            <img src="/assets/img/iphone.png">
+            <div class="mobile-info">
+                <div class="promo-container">
+                    <ul>
+                        <li class="active" (click)="viewCampaignDetail()">
+                            <img src="/assets/img/products/3x2v2.png">
+                        </li>
+                        <!--
+                        <li class="active2" (click)="viewCampaignDetail()">
+                            <img src="/assets/img/products/3x2v2.png">
+                        </li>
+                        <li class="active3" (click)="viewCampaignDetail()">
+                            <img src="/assets/img/products/3x2v2.png">
+                        </li>-->
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

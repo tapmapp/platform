@@ -1,0 +1,9 @@
+.create-campaign { padding: 0px; }
+.create-campaign .content { padding: 120px 0px 0px 0px; }
+.create-campaign .content .col-md-3 { padding: 0px 20px; }
+.create-campaign .content .box { text-align: center; background-color: white; padding: 0px 0px 20px 0px; }
+.create-campaign .content .box a,
+.create-campaign .content .box a:hover { text-decoration: none; color: #333; }
+.create-campaign .content .box img { width: 100%; }
+.create-campaign .content .box h3 { margin: 25px 0px 15px 0px; }
+.create-campaign .content .box p { padding: 0px 30px; color: #333; font-size: 13px; line-height: 21px;}

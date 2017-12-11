@@ -1,0 +1,146 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<div class="col-md-10 edit-product-info-cont">
+    <div class="col-md-8 cont">
+        <div class="title">Edit Product</div>
+        <h1>{{ selectedProduct.brandName }}, {{ selectedProduct.name }}, {{ selectedProduct.size }}</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Category</h2>
+                <div class="selected-category" (click)="showHideCategories()">{{ selectedCategory }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: categoryState }">
+                    <div class="options" *ngFor="let category of categories" (click)="selectCategoryFilter(category.name)">{{ category.name }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="lot">Lots <span class="add-lot" (click)="addLot()"><i class="fa fa-plus" aria-hidden="true"></i> Add</span></h2>
+        
+
+        <div class="table">
+
+            <div class="title">
+                <div class="name">
+                    Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+                <div class="brand">
+                    Store <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+                <div class="acq-price">
+                    Acq. <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+                <div class="sale-price">
+                    Price <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+                <div class="sale-price">
+                    Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+                <div class="units">
+                    Units <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+                <div class="exp-date">
+                    Exp. Date <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="list" *ngFor="let lot of selectedProduct.lot">
+                <div class="name" (click)="selectProduct(product.id)">
+                    <input type="text" [ngModel]="lot.name">
+                </div>
+                <div class="brand" (click)="selectProduct(product.id)">
+                    <input type="text" [ngModel]="lot.store">
+                </div>
+                <div class="acq-price">
+                    <input type="text" [ngModel]="lot.acqPrice.toFixed(2)">
+                </div>
+                <div class="sale-price">
+                    <input type="text" [ngModel]="lot.salePrice.toFixed(2)">
+                </div>
+                <div class="sale-price">
+                    <input type="text" [ngModel]="(lot.salePrice - lot.acqPrice)">
+                </div>
+                <div class="units">
+                    <input type="text" [ngModel]="lot.units">
+                </div>
+                <div class="exp-date">
+                    <input type="text" [ngModel]="lot.expDate">
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <!--
+        <div *ngFor="let lot of selectedProduct.lot" class="lot-info">
+            <div class="col-md-9 lot-form">
+                <div class="row">
+                    <div class="col-md-4 store">
+                        <label for="">Name</label>
+                        <br/>
+                        <input type="text" id="" [ngModel]="lot.name">
+                    </div>
+                    <div class="col-md-4 store">
+                        <label for="">Stores</label>
+                        <br/>
+                        <div class="selected-store" (click)="showHideStores()">{{ selectedStore }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: storeState }">
+                            <div class="options" (click)="selectStoreFilter('all')">All stores</div>
+                            <div class="options" *ngFor="let store of stores" (click)="selectStoreFilter(store.name)">{{ store.name }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 exp-date">
+                        <label for="">Exp. Date</label>
+                        <br/>
+                        <input type="date" id="" [ngModel]="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 acq-price">
+                        <label for="">Acq. price</label>
+                        <br/>
+                        <input type="text" id="" [ngModel]="lot.acqPrice">
+                    </div>
+                    <div class="col-md-3 sale-price">
+                        <label for="">Price</label>
+                        <br/>
+                        <input type="text" id="" [ngModel]="lot.salePrice">
+                    </div>
+                    <div class="col-md-3 sale-price">
+                        <label for="">Profit</label>
+                        <br/>
+                        <input type="text" id="" [ngModel]="(lot.salePrice - lot.acqPrice)">
+                    </div>
+                    
+                    <div class="col-md-3 units">
+                        <label for="">Units</label>
+                        <br/>
+                        <input type="text" id="" [ngModel]="lot.units">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 lot-control">
+                <ul>
+                    <li>
+                        <div class="btn edit-lot" (click)="editLot(lot._id)">Edit</div>
+                    </li>
+                    <li>
+                        <div class="btn save-lot" (click)="saveLot(lot._id)">Save</div>
+                    </li>
+                    <li>
+                        <div class="btn delete-lot" (click)="deleteLot(lot._id)">Delete</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        -->
+        <div class="col-md-12 save">
+            <div class="btn" (click)="saveProduct()">Edit Product</div>
+            <div class="btn delete" (click)="deleteProduct(selectedProduct.id)">Delete Product</div>
+        </div>
+    </div>
+    <div class="col-md-3 cont">
+        <div class="product-img">
+            <img src="./assets/img/products/{{selectedProduct.img}}">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+.clients-lists .chart-content.chart { position: relative; top: 55px; border-bottom: 1px solid #bbb; height: 330px; background-color: white; }
+.clients-lists { min-height: 100vh; padding: 0px; }
+.clients-lists .menu { padding-top: 70px; border-right: 1px solid #e4e4e4; min-height: 100vh; }
+.clients-lists .menu ul {list-style: none; padding-top: 70px;}
+.clients-lists .menu ul li {color: #5d5d5d; }
+
+.clients-lists .content { background-color: #f9f9f9; padding: 110px 15px 0px 15px; }
+.clients-lists .content h2 { margin: 0px 0px 20px 0px; }
+.clients-lists .content h2 i { margin: 0px 5px 0px 0px; font-size: 24px; }
+.clients-lists .content h2 span { position: relative; bottom: 3px; font-size: 14px; margin: 0px 0px 0px 20px; cursor: pointer; }
+.clients-lists .content h2 span.active { color: #7bbcda; }
+.clients-lists .content h2 span i { font-size: 14px; }
+.clients-lists .content .box h3 { font-size: 14px; color: #5d5d5d; margin: 0px; }
+.clients-lists .content .box h3 i { float: right; line-height: 33px; font-size: 12px; cursor: pointer; }
+.clients-lists .content .box .box-content { margin: 0px 0px 45px 0px; }
+.clients-lists .content .box .box-content .clients-cont .title { width: 100%; border: 0px; height: 32px; }
+.clients-lists .content .box .box-content .clients-cont .title div { 
+    height: 32px;
+    float: left; 
+    border-right: 1px solid #f9f9f9; 
+    padding: 4px 9px; 
+    font-size: 13px; 
+    color: #333333; 
+    cursor: pointer; 
+    background-color: #e2e2e2; 
+    line-height: 24px;
+    background: rgb(122,188,255); /* Old browsers */
+    background: -moz-linear-gradient(top, #f3f2f2 0%, #dadada 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f3f2f2 0%, #dadada 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f3f2f2 0%, #dadada 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.clients-lists .content .box .box-content .clients-cont .title div i { line-height: 24px; float: right; padding: 0px 0px 0px 5px; }
+.clients-lists .content .box .box-content .clients-cont .title .image { width: 6%; text-align:center; }
+.clients-lists .content .box .box-content .clients-cont .title .image i { float: none; padding: 0px; }
+.clients-lists .content .box .box-content .clients-cont .title .name {  width: 14%; }
+.clients-lists .content .box .box-content .clients-cont .title .genre {  width: 9%; }
+.clients-lists .content .box .box-content .clients-cont .title .age {  width: 7%; }
+.clients-lists .content .box .box-content .clients-cont .title .avg-spend { width: 13%; }
+.clients-lists .content .box .box-content .clients-cont .title .total-spend { width: 13%; }
+.clients-lists .content .box .box-content .clients-cont .title .acq-price { width: 10%; }
+.clients-lists .content .box .box-content .clients-cont .title .profit { width: 10%; }
+.clients-lists .content .box .box-content .clients-cont .title .units { width: 10%; }
+.clients-lists .content .box .box-content .clients-cont .title .exp-date { width: 15%; }
+.clients-lists .content .box .box-content .clients-cont .title .rate { width: 12%; }
+
+.clients-lists .content .box .box-content .clients-cont .list { line-height: 28px; height: 33px;}
+.clients-lists .content .box .box-content .clients-cont .list:hover div { background-color: #f1f1f1; cursor:pointer; }
+.clients-lists .content .box .box-content .clients-cont .list div { float: left; border-right: 1px solid #f9f9f9; padding: 0px 9px; height: 42px; background-color: #fff; font-size: 12px; line-height: 42px; border-bottom: 1px solid #f9f9f9; width: 100%; }
+.clients-lists .content .box .box-content .clients-cont .list div:last-child { border-right: 1px solid #f9f9f9; }
+.clients-lists .content .box .box-content .clients-cont .list .image { text-align: center; width: 6%; }
+.clients-lists .content .box .box-content .clients-cont .list img { width: 30px; border-radius: 50%; }
+.clients-lists .content .box .box-content .clients-cont .list .name { width: 14%; }
+.clients-lists .content .box .box-content .clients-cont .list .genre { width: 9%; text-align: center; }
+.clients-lists .content .box .box-content .clients-cont .list .age { width: 7%; text-align: center; }
+.clients-lists .content .box .box-content .clients-cont .list .avg-spend { width: 13%; text-align: right; }
+.clients-lists .content .box .box-content .clients-cont .list .total-spend { width: 13%; text-align: right; }
+
+.clients-lists .content .box .box-content .clients-cont .list .acq-price { width: 10%; }
+.clients-lists .content .box .box-content .clients-cont .list .date { width: 12%; }
+.clients-lists .content .box .box-content .clients-cont .list .profit { width: 10%; }
+.clients-lists .content .box .box-content .clients-cont .list .units { width: 10%; }
+.clients-lists .content .box .box-content .clients-cont .list .exp-date { width: 15%; }
+.clients-lists .content .box .box-content .clients-cont .list .rate { width: 12%; padding: 0px; text-align: center; }
+.clients-lists .content .box .box-content .clients-cont .list .rate i { margin: 0px 2px; line-height: 36px; color: #ececec; }
+.clients-lists .content .box .box-content .clients-cont .list .rate i.ilu { color: #f3d500; }
+
+.clients-lists .content .box .box-content .lists-cont .title { width: 100%; height:32px; }
+.clients-lists .content .box .box-content .lists-cont .title div { 
+    height: 32px;
+    float: left; 
+    border-right: 1px solid #f9f9f9; 
+    padding: 4px 9px; 
+    font-size: 13px; 
+    color: #333; 
+    cursor: pointer; 
+    line-height: 24px;
+    background: rgb(122,188,255); /* Old browsers */
+    background: -moz-linear-gradient(top, #f3f2f2 0%, #dadada 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f3f2f2 0%, #dadada 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f3f2f2 0%, #dadada 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ 
+}
+.clients-lists .content .box .box-content .lists-cont .title div i { line-height: 21px; float: right; padding: 0px 0px 0px 10px; }
+.clients-lists .content .box .box-content .lists-cont .title .name { width: 70%; }
+.clients-lists .content .box .box-content .lists-cont .title .items { width: 30%; }
+
+.clients-lists .content .box .box-content .lists-cont .list div { float: left; border-right: 1px solid #f9f9f9; padding: 0px 9px; background-color: #fff; font-size: 12px; line-height: 42px; border-bottom: 1px solid #f9f9f9; }
+.clients-lists .content .box .box-content .lists-cont .list.active div,
+.clients-lists .content .box .box-content .lists-cont .list.active:hover div { background-color: #7bbcda; color: white; }
+.clients-lists .content .box .box-content .lists-cont .list div.active { background-color: blue; color: white; }
+.clients-lists .content .box .box-content .lists-cont .list .name { width: 70%; }
+.clients-lists .content .box .box-content .lists-cont .list .items { width: 30%; text-align: right; }
+.clients-lists .content .box .box-content .lists-cont .list:hover div { background-color: #f1f1f1; cursor:pointer; }
+
+.clients-lists .content .lists .new-clients-list { display: none; margin: 0px 0px 30px 0px; }
+.clients-lists .content .lists .new-clients-list.active { display: inherit; }
+.clients-lists .content .lists .new-clients-list input { line-height: 32px; padding: 2px 9px; border: 1px solid #e2e2e2; width: 65%; }
+.clients-lists .content .lists .new-clients-list span { line-height: 32px; padding: 2px 9px; background-color: #7bbcda; color: white; display: inline-block; width: 30%; text-align: center; margin: 0px 0px 0px 5%; }

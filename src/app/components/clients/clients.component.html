@@ -1,0 +1,21 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 column-chart"> 
+    <filter-menu [filterOptions]="filterOptions"></filter-menu>
+</section>
+
+<section class="col-md-10 clients">
+
+    <div class="content line-chart">
+        <google-chart #cchart [data]="lineChartData"></google-chart>
+    </div>
+
+    <div class="content bar-chart">
+        <google-chart #cchart2 [data]="columnDaysData"></google-chart>
+        <google-chart #cchart3 [data]="columnTimeData"></google-chart>
+    </div>
+
+</section>
+<section class="col-md-10">
+    <clients-list [clients]="clients"></clients-list>
+</section>

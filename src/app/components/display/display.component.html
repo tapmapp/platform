@@ -1,0 +1,7 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 map">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14">
+        <agm-marker *ngFor="let store of stores" [latitude]="store.lat" [longitude]="store.lon"></agm-marker>
+    </agm-map>
+</section>

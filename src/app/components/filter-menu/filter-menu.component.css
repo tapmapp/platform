@@ -1,0 +1,34 @@
+/* PLATFORM CSS */
+.filters { background-color: #fff; border-bottom: 1px solid #bbb; position: relative; z-index: 10; width: 100%; height: 57px; }
+.filters .main-filters { padding: 0px 60px 0px 30px; }
+.filters ul { list-style: none; float: left; margin: 1px 0px; padding: 0px; height: 54px; width: 100%; }
+.filters ul li { float: left; margin: 13px 15px 0px 0px; min-width: 150px; }
+.filters ul .selected-date { min-width: 130px; }
+
+.filters ul .selected-date div { padding: 0px; }
+.filters ul .selected-date div input[type=date] { border: 0px; height: 24px; width: 98px; padding: 0px 2px 0px 5px; }
+.filters ul .selected-date div input[type=date]::-webkit-inner-spin-button,
+.filters ul .selected-date div input[type=date]::-webkit-clear-button { -webkit-appearance: none; display: none; }
+.filters ul .selected-date div input[type=date]::-webkit-calendar-picker-indicator { height: 5px; color: #333;  opacity: 1; }
+.filters ul .selected-date div input[type=date]::-webkit-calendar-picker-indicator:hover { background-color: #fff; color: #333; height: 5px; }
+.filters ul .selected-date div input:focus { outline: -webkit-focus-ring-color auto 0px; }
+.filters ul .selected-date div i { float: left; margin: 0px 5px 0px 10px; }
+
+.filters ul .selected-period { min-width: 100px; }
+.filters ul .genre { min-width: 150px; }
+.filters ul .chart-type { min-width: 20px; font-size: 16px; line-height: 26px; line-height: 30px; float: right; margin: 14px 15px 0px 0px; }
+.filters ul .chart-type i { cursor: pointer; }
+.filters ul li div { background-color: #fff; padding: 0px 8px; font-size: 12px; border: 1px solid #bbb; line-height: 24px; margin: 1px 0px 0px 0px; cursor: pointer; }
+.filters ul li .options-cont { display: none; border: 0px; padding: 0px; margin: 0px; max-height: 125px; overflow-y: scroll; }
+.filters ul li .options-cont.active { display: inherit; }
+.filters ul li .options { background-color: white; margin: 0px; border-top: 0px; }
+.filters ul li .options:hover { background-color: #f1f1f1; }
+.filters ul li div i { float: right; line-height: 24px; }
+.filters ul li label { font-size: 10px; font-weight: 200; margin: 0px;  display: none; }
+.filters .burguer, .filters .minimize { position: absolute; right: 20px; top: 20px; font-size: 18px; color: #333; cursor: pointer; }
+
+.filters .extra-filters { display: none; height: 85px; background-color: white; border-bottom: 1px solid #bbb; width: 100%; padding: 0px 20px 0px 30px; position: relative; bottom: 2px; }
+.filters .extra-filters.active { display: inline-block; }
+.filters .extra-filters ul:first-child { margin: 0px 30px 0px 0px; border-top: 1px solid #bbb; }
+.filters .extra-filters ul li span { font-size: 12px; margin: 0px 0px 10px 0px; }
+/* END PLATFORM CSS */

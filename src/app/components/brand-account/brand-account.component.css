@@ -1,0 +1,20 @@
+.video-cont {position: fixed; top: 0px; height: 100vh; overflow: hidden; background-color: #000; }
+.video-cont video { width: 100%; opacity: 0.3; }
+
+.login { height: 100vh; display: table; }
+.login .login-box { display: table-cell; vertical-align: middle; }
+.login .login-box ul { list-style: none; width: 340px; margin: 0 auto; text-align: center; }
+.login .login-box .logo { text-align: center; margin: 0px 0px 15px 0px; }
+.login .login-box .logo i { font-size: 14px; color: white; float: left; position: relative; top: 26px; left: 10px; }
+.login .login-box .logo h1 { color: white; font-size: 42px; text-align: left; }
+.login .login-box input { border: 0px; width: 100%; line-height: 28px; padding: 5px 10px 5px 40px; border-radius: 0px; background-color: transparent; text-align: left; letter-spacing: 1px; font-size: 14px; border-bottom: 1px solid #666; color: white; }
+.login .login-box input::-webkit-input-placeholder { color: #fff; }
+.login .login-box input::-moz-placeholder { color: #fff; }
+.login .login-box input:-ms-input-placeholder { color: #fff; }
+.login .login-box input:-moz-placeholder { color: #fff; }
+
+.login .login-box  input:focus { outline: -webkit-focus-ring-color auto 0px; }
+.login .login-box .login-button .button { background-color: #7bbcda; line-height: 42px; color: white; width: 100%; margin: 45px auto 15px auto; cursor: pointer; }
+.login .login-box .login-button a { float: right; color: white; }
+.login .login-box .login-button a:hover { text-decoration: none; }
+.login .login-box .login-button i { margin: 0px 3px 0px 0px; }

@@ -1,0 +1,61 @@
+<header-comp></header-comp>
+<section class="col-md-12 cashier-cont"> 
+    <div class="col-md-4 items-box">
+        <div  class="product-cont">
+            <div class="no-items-content" *ngIf="addedProductsList.length == 0">
+                No Items Added
+            </div>
+            <div *ngFor="let addedProduct of addedProductsList" class="product">
+                <ul>
+                    <li class="name">{{ addedProduct.name }} {{ addedProduct.size }}, {{ addedProduct.brand }}</li>
+                    <li class="items">
+                        <span class="less" (click)="lessItem(addedProduct._id)"><i class="fa fa-minus-square" aria-hidden="true"></i></span>
+                        <span>{{ addedProduct.items }}</span>
+                        <span class="add" (click)="addItem(addedProduct._id)"><i class="fa fa-plus-square" aria-hidden="true"></i></span>
+                    </li>
+                    <li class="price">{{ addedProduct.price  }} €</li>
+                    <li class="total">{{ (addedProduct.price * addedProduct.items).toFixed(2)  }} €</li>
+                </ul>
+            </div>
+        </div>
+        <div class="check-cont">
+            <div class="totalAmount">
+                <span>Total Amount: </span><span>{{ totalAmount.toFixed(2) }} €</span>
+            </div>
+            <div class="check-out" (click)="checkOut()">
+                Check out
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 categories-box">
+        <ul>
+            <li class="active">
+                Beer
+            </li>
+            <li *ngFor="let category of categories" (click)="selectCategory(category._id)">
+                <span>{{ category.name }}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 products-box">
+        <div *ngFor="let product of products" class="product" (click)="addProduct(product._id)">
+            <ul>
+                <li class="img">
+                    <img src="./assets/img/products/{{product.img}}">
+                </li>
+                <li class="product-name">
+                    <span>{{ product.name }}, {{ product.size }}</span>
+                </li>
+                <li class="product-brand">
+                    <span>{{ product.brandName }}</span>
+                </li>
+                <li *ngFor="let lot of product.lot" class="product-price">
+                    <span *ngIf="lot.active == true">{{ lot.salePrice }} €</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</section>

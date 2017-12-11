@@ -1,0 +1,14 @@
+/* FOOTER */
+footer { background-color: #5d5d5d; height: 60vh; color: #ccc; padding: 50px 0px 0px 0px; border-top: 1px solid #6b6a6a; }
+footer h3 { color: white; text-align: left; }
+footer label { display: inline-block; width: 100%; font-size: 12px; font-weight: 200; padding: 0px 0px 0px 9px; }
+footer input { background-color: #5d5d5d; height: 30px; width: 250px; margin: 0px 0px 10px 0px;  padding: 0px 0px 0px 9px; font-weight: 200;  font-size: 14px; letter-spacing: 1px; }
+footer textarea { padding: 9px;  background-color: #5d5d5d; width: 250px; max-width: 250px; font-size: 14px; height: 100px; max-height:100px; font-weight: 200; letter-spacing: 1px; }
+footer ul { list-style: none; padding: 9px; margin: 20px 0px 0px 0px; }
+footer .start-selling span { background-color: #c5b92e; width: 25px; height: 25px; color: #173e50; font-size: 14px; border-radius: 50%; display: inline-block; line-height: 26px; text-align: center; margin: 0px 7px 0px 0px;}
+footer .start-selling li { margin: 0px 0px 10px 0px; }
+footer .contact ul { padding: 0px; width: 250px; }
+footer .social ul li { margin: 0px 0px 5px 0px; }
+footer .social ul li i { padding: 0px 5px 5px 0px; }
+footer .btn.submit { background-color: #ccc; float: right; border: 0px; color: #333; font-size: 10px; letter-spacing: 2px; margin: 10px 0px 0px 0px; }
+/* END FOOTER */

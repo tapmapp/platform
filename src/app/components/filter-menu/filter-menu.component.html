@@ -1,0 +1,102 @@
+<div class="filters">
+    <div class="main-filters">
+        <ul>
+            <li *ngIf="filterOptions.store == true">
+                <label>Stores:</label>
+                <div (click)="showHideStores()">{{ selectedStore }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: storeState }">
+                    <div class="options" (click)="selectStore('All Stores', '')">All Stores</div>
+                    <div class="options" *ngFor="let store of stores" (click)="selectStore(store.name, store._id)">{{ store.name }}</div>
+                </div>
+            </li>
+            <li *ngIf="filterOptions.category == true">
+                <label>Category:</label>
+                <div (click)="showHideCategories()">{{ selectedCategory }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: categoryState }">
+                    <div class="options" (click)="selectCategory('All Categories', '')">All Categories</div>
+                    <div class="options" *ngFor="let category of categories" (click)="selectCategory(category.name, category._id)">{{ category.name }}</div>
+                </div>
+            </li>
+            <li *ngIf="filterOptions.product == true">
+                <label>Product:</label>
+                <div (click)="showHideProducts()">{{ selectedProduct }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: productState }">
+                    <div class="options" (click)="selectProduct('All Products', '')">All Products</div>
+                    <div class="options" *ngFor="let product of products" (click)="selectProduct(product.brand + '-' + product.name, product.productId)">{{ product.name + ' - ' + product.brandName }}</div>
+                </div>
+            </li>
+            <li *ngIf="filterOptions.brand == true">
+                <label>Brand:</label>
+                <div (click)="showHideBrands()">{{ selectedBrand }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: brandState }">
+                    <div class="options" (click)="selectBrand('All Brands', '')">All Brands</div>
+                    <div class="options" *ngFor="let brand of brands" (click)="selectBrand(brand.name, brand._id)">{{ brand.name }}</div>
+                </div>
+            </li>
+            
+            <li class="selected-date" *ngIf="filterOptions.fromDate == true">
+                <label>From:</label>
+                <div>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <input type="date" [ngModel]="filterConfig.fromDate | date:'yyyy-MM-dd'" onkeydown="return false" (ngModelChange)="selectFromDate($event)">
+                </div>
+            </li>
+            <li class="selected-date" *ngIf="filterOptions.toDate == true">
+                <label>To:</label>
+                <div>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <input type="date" [ngModel]="filterConfig.toDate | date:'yyyy-MM-dd'" onkeydown="return false" (ngModelChange)="selectToDate($event)">
+                </div>
+            </li>
+            
+            <li class="chart-type">
+                <i class="fa fa-line-chart" aria-hidden="true"></i>
+            </li>
+            <li class="chart-type">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            </li>
+        </ul>
+        <i class="fa fa-align-justify burguer" aria-hidden="true" (click)="showHideFilters()" *ngIf="extraFiltersState == false"></i>
+        <i class="fa fa-times minimize" aria-hidden="true" (click)="showHideFilters()" *ngIf="extraFiltersState == true"></i>
+    </div>
+    <div class="extra-filters" [ngClass]="{ active: extraFiltersState }">
+        <ul>
+            <li class="period" *ngIf="filterOptions.period == true">
+                <span>Period</span>
+                <div (click)="showHidePeriod()">{{ selectedPeriod }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: periodState }">
+                    <div class="options" (click)="selectPeriod('Daily')">Daily</div>
+                    <div class="options" (click)="selectPeriod('Weekly')">Weekly</div>
+                    <div class="options" (click)="selectPeriod('Monthly')">Monthly</div>
+                    <div class="options" (click)="selectPeriod('Yearly')">Yearly</div>
+                </div>
+            </li>
+            <li class="genre" *ngIf="filterOptions.genre == true">
+                <span>Genre</span>
+                <div (click)="showHideGenre()">{{ selectedGenre }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: genreState }">
+                    <div class="options" (click)="selectGenre('All Genres', '')">All Genres</div>
+                    <div class="options" (click)="selectGenre('Man', 'Man')">Man</div>
+                    <div class="options" (click)="selectGenre('Woman','Woman')">Woman</div>
+                </div>
+            </li>
+            <li class="method" *ngIf="filterOptions.method == true">
+                <span>Payment Method</span>
+                <div (click)="showHideMethod()">{{ selectedMethod }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: methodState }">
+                    <div class="options" (click)="selectMethod('All Methods', '')">All Methods</div>
+                    <div class="options" (click)="selectMethod('Cash', 'cash')">Cash</div>
+                    <div class="options" (click)="selectMethod('Credit Card','credit')">Credit Card</div>
+                </div>
+            </li>
+            <li class="genre" *ngIf="filterOptions.genre == true">
+                <span>Rate</span>
+                <div (click)="showHideGenre()">{{ selectedRate }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                <div class="options-cont" [ngClass]="{ active: rateState }">
+                    <div class="options" (click)="selectRate('All Rates', '')">All Rates</div>
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

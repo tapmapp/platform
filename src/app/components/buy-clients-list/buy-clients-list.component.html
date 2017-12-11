@@ -1,0 +1,102 @@
+<div class="buy-clients-cont">
+    <div class="title-content">
+        <ul>
+            <li class="logo">Buy Clients</li>
+            <li class="select-all" (click)="selectAllClients()">
+                <i class="fa fa-square-o" aria-hidden="true"></i> Select all clients
+            </li>
+            <li class="buy-clients">
+                <span>Purchase Clients</span>    
+            </li>
+            <li class="buy-clients-number">
+                <span>303 Clients / 45.30 €</span>    
+            </li>
+        </ul>
+    </div>
+    <div class="title">
+        <div class="select">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="name">
+            Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="genre">
+            Genre <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="age">
+            Age <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="dist">
+            Dist. <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <!--
+        <div class="postalCode">
+            Postal Code <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="name">
+            Residence <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>-->
+        <div class="avg-spend">
+            Avg. Spend <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="total-spend">
+            Total Spend <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="avg-spend">
+            Avg. Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="total-spend">
+            Total Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="avg-visits">
+            Visits <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="rate">
+            Client Value <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="list" *ngFor="let client of clients">
+        <div class="select">
+            <i class="fa fa-square-o" aria-hidden="true"></i>
+        </div>
+        <div class="name">
+            <span (click)="selectUser(client.userId)">{{ client.name }} {{ client.lastName }}</span>
+        </div>
+        <div class="genre">
+            <span (click)="selectGenre(client.genre)">{{ client.genre }}</span>
+        </div>
+        <div class="age">
+            {{ client.age }}
+        </div>
+        <div class="dist">
+            {{ client.distance }}
+        </div>
+        <!--
+        <div class="postalCode">
+            {{ client.postalCode }}
+        </div>
+        <div class="name">
+            {{ client.city + ', ' + client.country }}
+        </div>
+        -->
+        <div class="avg-spend">
+            {{ (client.totalSpend / client.visits).toFixed(2) }} €
+        </div>
+        <div class="total-spend">
+            {{ client.totalSpend.toFixed(2) }} €
+        </div>
+        <div class="total-spend">
+            {{ (client.totalProfit / client.visits).toFixed(2) }} €
+        </div>
+        <div class="total-spend">
+            {{ client.totalProfit.toFixed(2) }} €
+        </div>
+        <div class="avg-visits">
+            {{ client.visits }}
+        </div>
+        <div class="rate">
+            0.30 €
+        </div>
+    </div>
+</div>

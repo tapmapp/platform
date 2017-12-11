@@ -1,0 +1,22 @@
+<div class="categories-cont">
+
+    <div class="title">
+        <div class="name">
+            Category <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="items">
+            Items <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="list" *ngFor="let category of categories" (click)="selectCategory(category._id)">
+        <div class="name">
+            <span>{{ category.name }}</span>
+        </div>
+        <div class="items">
+            {{ category.items }}
+        </div>
+    </div>
+
+</div>
+

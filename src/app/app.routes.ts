@@ -1,0 +1,46 @@
+import { Routes } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { BuyClientsComponent } from './components/buy-clients/buy-clients.component';
+import { CampaignsComponent } from './components/campaigns/campaigns.component';
+import { CampaignInfoComponent } from './components/campaign-info/campaign-info.component';
+import { CashierComponent } from './components/cashier/cashier.component';
+import { ClientsListsComponent } from './components/clients-lists/clients-lists.component';
+import { ClientInfoComponent } from './components/client-info/client-info.component';
+import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
+import { ClientsComponent } from './components/clients/clients.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { DisplayComponent } from './components/display/display.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { LoginComponent } from './components/login/login.component';
+import { ProductsComponent } from './components/products/products.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { MobileComponent } from './components/mobile/mobile.component';
+import { SalesComponent } from './components/sales/sales.component';
+import { StoresComponent } from './components/stores/stores.component';
+
+export const ROUTES: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'campaigns', component: CampaignsComponent },
+  { path: 'campaigns/create-campaign', component: CreateCampaignComponent },
+  { path: 'campaigns/mobile', component: MobileComponent },
+  { path: 'campaigns/social', component: CampaignsComponent },
+  { path: 'cashier', component: CashierComponent },
+  { path: 'campaigns/display', component: DisplayComponent },
+  { path: 'campaigns/:id', component: CampaignInfoComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'clients', component: ClientsComponent },
+  { path: 'clients/buy-clients', component: BuyClientsComponent },
+  { path: 'clients/clients-lists', component: ClientsListsComponent },
+  { path: 'clients/:id', component: ClientInfoComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'messages', component: MessagesComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'products/add-product', component: AddProductComponent },
+  { path: 'products/add-category', component: AddCategoryComponent },
+  { path: 'products/:id', component: EditProductComponent },
+  { path: 'sales', component: SalesComponent },
+  { path: 'stores', component: StoresComponent }
+];

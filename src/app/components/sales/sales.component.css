@@ -1,0 +1,10 @@
+/* PLATFORM CSS */
+.column-chart {padding: 0px; padding-top: 55px; }
+
+.sales { background-color: #f9f9f9; padding: 0px 0px; overflow-y: scroll; height: calc(100vh - 112px); }
+.sales .content { background-color: white; }
+.sales .content.chart { height: 330px; border-bottom: 1px solid #bbb; background-color: #ffffff; width: 100%; }
+
+/* COLUMN CHART */
+.chart { width: 100%; min-height: 300px; }
+/* END COLUMN CHART */

@@ -1,0 +1,83 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 add-product-cont">
+    <div class="row content">
+        <section class="col-md-8 add-product-info">
+            <h2>Add Product</h2>
+            <div class="general-info">
+                <h3>General Information</h3>
+                <ul>
+                    <li>
+                        <label>Name:</label>
+                        <br/>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label>Size:</label>
+                        <br/>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label>Product Image:</label>
+                        <br/>
+                        <input type="file">
+                    </li>
+                </ul>
+                <ul>
+                    <li class="display-cont">
+                        <label>Brand:</label>
+                        <div (click)="showHideBrands()">{{ selectedBrand }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: brandState }">
+                            <div class="options" *ngFor="let brand of brands" (click)="selectBrand(brand.name, brand._id)">{{ brand.name }}</div>
+                        </div>
+                    </li>
+                    <li class="display-cont">
+                        <label>Category:</label>
+                        <div (click)="showHideCategories()">{{ selectedCategory }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: categoryState }">
+                            <div class="options" *ngFor="let category of categories" (click)="selectCategory(category.name, category._id)">{{ category.name }}</div>
+                        </div>
+                    </li>
+                    <li class="display-cont">
+                        <label>Stores:</label>
+                        <div (click)="showHideStores()">{{ selectedStore }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+                        <div class="options-cont" [ngClass]="{ active: storeState }">
+                            <div class="options" (click)="selectStore('All Stores', '')">All Stores</div>
+                            <div class="options" *ngFor="let store of stores" (click)="selectStore(store.name, store._id)">{{ store.name }}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--
+            <div class="product-info">
+                <h3>Nutritional Information</h3>
+                <ul>
+                    <li>
+                        <label>Name:</label>
+                        <br/>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label>Brand:</label>
+                        <br/>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label>Size:</label>
+                        <br/>
+                        <input type="text">
+                    </li>
+                    
+                </ul>
+            </div>-->
+            <div class="add-product">
+                <span (click)="createProduct()">Add Product</span>
+            </div>
+        </section>
+        <section class="col-md-4 add-product-img">
+            <div class="product-cont">
+                <img src="/assets/img/products/classic-coca-cola.jpg">
+            </div>
+        </section>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 buy-clients-filter">
+    <filter-menu [filterOptions]="filterOptions"></filter-menu>
+</section>
+<section class="col-md-10 buy-clients-cont">
+    <div class="content">
+        <div class="content line-chart">
+            <google-chart #cchart [data]="lineChartData"></google-chart>
+        </div>
+    </div>
+    <div class="content bar-chart">
+        <google-chart #cchart2 [data]="columnDaysData"></google-chart>
+        <google-chart #cchart3 [data]="columnTimeData"></google-chart>
+    </div>
+</section>
+<section class="col-md-10">
+    <buy-clients-list [clients]="clients"></buy-clients-list>
+</section>

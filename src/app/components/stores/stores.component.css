@@ -1,0 +1,11 @@
+/* STORES CSS */
+.map { padding: 0px; padding-top: 55px; }
+.map agm-map { height: 330px; }
+
+.stores { padding-top: 55px; background-color: #f9f9f9; min-height: 100vh; padding-right: 45px; padding-left: 45px; border-top: 1px solid #e8e8e8; }
+.stores .store { background-color: #fff; padding-top: 30px; padding-bottom: 30px; }
+.stores .store .name { color: #333; text-transform: uppercase; text-align: center; font-size: 18px; font-weight: bold; margin: 0px 0px 10px 0px; }
+.stores .store .address { text-align: center; }
+.stores .store .city { text-align: center; }
+.stores .store .phone { text-align: center; }
+/* END stores CSS */

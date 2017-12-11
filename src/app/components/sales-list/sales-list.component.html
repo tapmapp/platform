@@ -1,0 +1,194 @@
+<div class="sales-list-cont">
+    <div class="title-content">
+        <ul>
+            <li class="logo">Sales</li>
+            <li class="filter-by" (click)="orderSalesBy('tickets')" [ngClass]="{active: orderBy == 'tickets'}">
+                <i class="fa fa-ticket" aria-hidden="true"></i> Tickets
+            </li>
+            <li class="filter-by" (click)="orderSalesBy('products')" [ngClass]="{active: orderBy == 'products'}">
+                <i class="fa fa-cube" aria-hidden="true"></i> Products
+            </li>
+            <li class="total">Total Profit: <span class="profit">{{ totalProfit.toFixed(2) }} €</span></li>
+            <li class="total">Total Amount: <span>{{ totalAmount.toFixed(2) }} €</span></li>
+        </ul>
+    </div>
+    <div class="box-content" *ngIf="orderBy == 'products'">
+        <div class="title">
+            <div class="id" (click)="orderBy('ticketId')">
+                <i class="fa fa-ticket" aria-hidden="true"></i>
+            </div>
+            <div class="id" (click)="orderBy('userId')">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="store" (click)="orderBy('storeId')">
+                Store <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="name" (click)="orderBy('product')">
+                Product <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="brand" (click)="orderBy('brand')">
+                Brand <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="categorie" (click)="orderBy('category')">
+                Catg. <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="sale-price" (click)="orderBy('acqPrice')">
+                Acq. <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="sale-price" (click)="orderBy('price')">
+                Price <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="units" (click)="orderBy('quantity')">
+                Qt. <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="total-price" (click)="orderBy('total')">
+                Total <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="total-price" (click)="orderBy('profit')">
+                Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="date" (click)="orderBy('date')">
+                Date <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="list" *ngFor="let sale of sales">
+                <div class="id">
+                    <i class="fa fa-ticket" aria-hidden="true" (click)="selectUser(sale.ticketId)"></i>
+                </div>
+                <div class="id">
+                    <a [routerLink]="['/clients', sale.userId]">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="store">
+                    <span (click)="selectStore(sale.storeId)">{{ sale.storeName }}</span>
+                </div>
+                <div class="name">
+                    {{ sale.productName }}
+                </div>
+                <div class="brand">
+                    <span (click)="selectBrand(sale.brandId)">{{ sale.brandName }}</span>
+                </div>
+                <div class="categorie" (click)="selectCategory(sale.categoryId)">
+                    {{ sale.categoryName }}
+                </div>
+                <div class="sale-price">
+                    {{ (sale.acqPrice * 1).toFixed(2) }} €
+                </div>
+                <div class="sale-price">
+                    {{ (sale.price * 1).toFixed(2) }} €
+                </div>
+                <div class="units">
+                    {{ sale.units }}
+                </div>
+                <div class="total-price">
+                    {{ (sale.price * sale.units).toFixed(2) }} €
+                </div>
+                <div class="total-price profit">
+                    {{ ((sale.price - sale.acqPrice) * sale.units).toFixed(2) }} €
+                </div>
+                <div class="date">
+                    {{ sale.date | date: 'dd-MM-yyyy HH:mm' }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-content" *ngIf="orderBy == 'tickets'">
+        <div class="title">
+            <div class="id" (click)="orderBy('ticketId')">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+            <div class="store tickets" (click)="orderBy('storeId')">
+                Store <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="client" (click)="orderBy('userId')">
+                <!--<i class="fa fa-id-badge" aria-hidden="true"></i>--> Client Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="genre">
+                <!--<i class="fa fa-id-badge" aria-hidden="true"></i>--> Genre <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="units" (click)="orderBy('quantity')">
+                Qt. <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="total-price" (click)="orderBy('total')">
+                Total <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="total-price" (click)="orderBy('profit')">
+                Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="rate" (click)="orderBy('date')">
+                Rate <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="method" (click)="orderBy('date')">
+                Method <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+            <div class="date" (click)="orderBy('date')">
+                Date <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="list" *ngFor="let sale of sales">
+                <div class="id">
+                    <i class="fa fa-eye" aria-hidden="true" (click)="selectTicketId(sale._id)" [ngClass]="{ active: sale._id == selectedTicketId }"></i>
+                </div>
+                <div class="store tickets">
+                    <span (click)="selectStore(sale.storeId)">{{ sale.storeName }}</span>
+                </div>
+                <div class="client">
+                    <span (click)="selectUser(sale.userId)">{{ sale.name }} {{ sale.lastName }}</span>
+                </div>
+                <div class="genre">
+                    <span (click)="selectGenre(sale.genre)">{{ sale.genre }}</span>
+                </div>
+                <div class="units">
+                    {{ sale.units }}
+                </div>
+                <div class="total-price">
+                    {{ (sale.totalAmount).toFixed(2) }} €
+                </div>
+                <div class="total-price profit">
+                    {{ (sale.totalProfit).toFixed(2) }} €
+                </div>
+                <div class="rate">
+                    <i class="fa fa-star ilu" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [sale.generalRate]"></i>
+                    <i class="fa fa-star" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [5 - sale.generalRate]"></i>
+                </div>
+                <div class="method">
+                    <i class="fa fa-money" aria-hidden="true" *ngIf="sale.method == 'cash'" (click)=selectMethod(sale.method)></i>
+                </div>
+                <div class="date">
+                    {{ sale.date | date: 'dd-MM-yyyy HH:mm' }}
+                </div>
+                <div class="sales-container" [ngClass]="{ active: sale._id == selectedTicketId }">
+                    <ul class="title">
+                        <li class="discount"></li>
+                        <li class="product-name">Product Name</li>
+                        <li class="product-category">Category</li>
+                        <li class="product-units">Units</li>
+                        <li class="product-price">Price</li>
+                        <li class="product-profit">Profit</li>
+                        <li class="rate">Rate</li>
+                        <li class="comments"><i class="fa fa-comment" aria-hidden="true"></i></li>
+                    </ul>
+                    <ul *ngFor="let product of sale.products">
+                        <li class="discount"><i class="fa fa-ticket" aria-hidden="true"></i></li>
+                        <li class="product-name" (click)="selectProduct(product.productId)"><span>{{ product.productName }}, {{ product.brandName }}</span></li>
+                        <li class="product-category" (click)="selectCategory(product.categoryId)"><span>{{ product.categoryName }}</span></li>
+                        <li class="product-units">{{ product.units }}</li>
+                        <li class="product-price">{{ (product.price).toFixed(2) }} €</li>
+                        <li class="product-profit">{{ ((product.price - product.acqPrice) * product.units).toFixed(2) }} €</li>
+                        <li class="rate">
+                            <i class="fa fa-star ilu" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [product.rate]"></i>
+                            <i class="fa fa-star" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [5 - product.rate]"></i>
+                        </li>
+                        <li class="comments">
+                            2
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

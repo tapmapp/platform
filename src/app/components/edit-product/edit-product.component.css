@@ -1,0 +1,65 @@
+.edit-product-info-cont { padding-left: 0px; padding-right: 0px; position: absolute; top: 0px; }
+.edit-product-info-cont .title { font-size:24px; margin: 40px 0px 20px 0px; } 
+.edit-product-info-cont .title .delete,
+.edit-product-info-cont .title .modify,
+.edit-product-info-cont .title .back { font-size: 24px; float: right; position: relative; left: 8px; bottom: 10px; }
+.edit-product-info-cont .title .back i { cursor: pointer; }
+.edit-product-info-cont .product-img { background-color: #fff; width: 100%; display: table-cell; vertical-align: middle; position: relative; bottom: 40px; }
+.edit-product-info-cont .product-img img { width: 100%; }
+
+.edit-product-info-cont h1 { margin: 0px 0px 50px 0px; }
+.edit-product-info-cont .cont { padding: 0px 30px 0px 50px; border-left: 1px solid #dfdfdf; height: 100vh; overflow-y: scroll; }
+.edit-product-info-cont .cont:first-child { padding: 0px 0px 0px 0px; border-left: 0px; height: 100vh; display: table; background-color: white; }
+.edit-product-info-cont .cont:first-child h2 { padding: 0px 0px 0px 0px; }
+.edit-product-info-cont .cont h2 { font-size: 18px; margin: 0px 0px 10px 0px; padding: 0px 0px 0px 9px; }
+.edit-product-info-cont .cont h2.lot { margin: 28px 0px 10px 0px; }
+.edit-product-info-cont .cont .lot-info { border: 1px solid #dfdfdf; height: 185px; padding: 15px 10px; background-color: #fff; margin: 15px 0px 15px 0px; }
+.edit-product-info-cont .cont .lot-info .lot-control ul {padding: 0px; list-style: none; }
+.edit-product-info-cont .cont .lot-info .lot-control .edit-lot { background-color: #7abcda; text-align: center; border-radius: 0px; color: white; width: 100px; margin: 25px 0px 0px 20px; }
+.edit-product-info-cont .cont .lot-info .lot-control .save-lot { background-color: #bbb; text-align: center; border-radius: 0px; color: white; width: 100px; margin: 7px 0px 0px 20px; }
+.edit-product-info-cont .cont .lot-info .lot-control .delete-lot { background-color: #da7b7a; text-align: center; border-radius: 0px; color: white; width: 100px; margin: 7px 0px 0px 20px; }
+.edit-product-info-cont .cont h2.lot .add-lot { font-size: 14px; margin: 0px 0px 0px 20px; cursor: pointer; }
+.edit-product-info-cont .cont label {font-weight: 200; padding: 0px 0px 0px 9px; }
+.edit-product-info-cont .cont input { margin: 0px 0px 10px 0px; height: 42px; padding: 0px 0px 0px 8px; width: 100%; border: 1px solid #dfdfdf; }
+
+.edit-product-info-cont .cont .selected-category { background-color: #fff; padding: 0px 16px 0px 8px; font-size: 14px; border: 1px solid #dfdfdf; line-height: 42px; margin: 1px 0px 10px 0px; cursor: pointer; }
+.edit-product-info-cont .cont .selected-category i {float: right; line-height: 42px; }
+.edit-product-info-cont .cont .options-cont { position: absolute; top: 73px; left: 0px; width: 100%; padding: 0px 15px 0px 15px; display: none; z-index: 100; }
+.edit-product-info-cont .cont .options-cont.active {display: initial; }
+.edit-product-info-cont .cont .options-cont .options { background-color: #fff; padding: 0px 8px; font-size: 12px; border-bottom: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-left: 1px solid #dfdfdf; line-height: 42px; cursor: pointer; }
+.edit-product-info-cont .cont .options-cont .options:hover { background-color: #f1f1f1; }
+
+.edit-product-info-cont .store .selected-store { background-color: #fff; padding: 0px 16px 0px 8px; font-size: 14px; border: 1px solid #dfdfdf; line-height: 40px; margin: 0px 0px 10px 0px; cursor: pointer; }
+.edit-product-info-cont .store .selected-store i {float: right; line-height: 42px; }
+.edit-product-info-cont .store .options-cont { position: absolute; top: 67px; left: 0px; z-index: 100; width: 100%; padding: 0px 15px 0px 15px; display: none;  }
+.edit-product-info-cont .store .options-cont.active {display: initial; }
+.edit-product-info-cont .store .options-cont .options:hover { background-color: #f1f1f1; }
+
+.edit-product-info-cont .save { height: 170px; width: 100%; display: inline-block; text-align: center; margin: 0px 0px 30px 0px; }
+.edit-product-info-cont .save .btn { background-color: #7bbcda; color: white; border-radius: 0px; padding: 8px 20px; margin: 50px 0px 0px 10px; }
+.edit-product-info-cont .save .btn.delete { background-color: #da7b7b; margin: 50px 0px 0px 30px; }
+
+.table .title { width: 100%; border: 0px; height: 32px; display: inherit; margin: 0px 0px;}
+.table .title div { float: left; border-right: 1px solid #f9f9f9; padding: 4px 9px 4px 9px; font-size: 12px; color: #333333; background-color: #e2e2e2; line-height: 24px; cursor: pointer; }
+.table .title div i { line-height: 24px; float: right; padding: 0px 0px 0px 10px; }
+.table .title .name {  width: 16%; }
+.table .title .brand { width: 16%; }
+.table .title .acq-price { width: 12%; }
+.table .title .sale-price { width: 12%; }
+.table .title .profit { width: 12%; }
+.table .title .units { width: 12%; }
+.table .title .exp-date { width: 15%; }
+
+.table .list { line-height: 28px; height: 33px;}
+.table .list:hover div { background-color: #f1f1f1; cursor:pointer; }
+.table .list div { float: left; border-right: 1px solid #f9f9f9; padding: 0px; background-color: #fff; font-size: 12px; line-height: 32px; border-bottom: 1px solid #f9f9f9; height: 33px; overflow: hidden; }
+.table .list div:last-child { border-right: 1px solid #f9f9f9; }
+.table .list .name { width: 16%; }
+.table .list .brand { width: 16%; }
+.table .list .acq-price { width: 12%; text-align: right; }
+.table .list .sale-price { width: 12%; text-align: right; }
+.table .list .profit { width: 12%; }
+.table .list .units { width: 12%; text-align: right; }
+.table .list .exp-date { width: 15%; text-align: center; }
+
+.table .list input { border: 0px; height: 32px; }

@@ -1,0 +1,10 @@
+.categories-cont .title div { float: left; border-right: 1px solid #f9f9f9; padding: 4px 9px; font-size: 13px; color: #333333; background-color: #ececec; line-height: 24px; cursor: pointer; }
+.categories-cont .title div:last-child { border-right: 0px; }
+.categories-cont .title div i { line-height: 21px; float: right; padding: 0px 0px 0px 10px; }
+.categories-cont .title .name { width: 70%; }
+.categories-cont .title .items { width: 30%; }
+
+.categories-cont .list div { float: left; border-right: 1px solid #f9f9f9; padding: 0px 9px; background-color: #fff; font-size: 12px; line-height: 42px; height: 42px; border-bottom: 1px solid #f9f9f9; cursor: pointer; }
+.categories-cont .list .name { width: 70%; }
+.categories-cont .list .name:hover { text-decoration: underline; }
+.categories-cont .list .items { width: 30%; }

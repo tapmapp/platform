@@ -1,0 +1,42 @@
+.buy-clients-cont { padding: 20px 15px 60px 15px; }
+.buy-clients-cont .title-content ul .select-all { color: #333; }
+.buy-clients-cont .title-content ul .select-all i { position: relative; padding: 0px 3px 0px 0px; top: 1px;}
+.buy-clients-cont .title-content ul .buy-clients { float: right; }
+.buy-clients-cont .title-content ul .buy-clients span { display: inline-block; padding: 0px 9px; color: white; background-color: #7abcda; line-height: 32px; }
+.buy-clients-cont .title-content ul .buy-clients-number { float: right; padding: 0px 30px 0px 0px; }
+.buy-clients-cont .title-content ul .buy-clients-number span { display: inline-block; line-height: 32px; }
+.buy-clients-cont .title-content ul { list-style: none; padding: 0px; width: 100%; height: 55px; }
+.buy-clients-cont .title-content ul li { line-height: 42px; cursor: pointer; float: left; }
+.buy-clients-cont .title-content ul .logo { font-size: 30px; margin: 0px 30px 0px 0px; cursor: inherit; }
+
+.buy-clients-cont .title div { float: left; border-right: 1px solid #f9f9f9; padding: 4px 9px; font-size: 13px; color: #333333; cursor: pointer; background-color: #ececec; line-height: 24px; }
+.buy-clients-cont .title div:last-child { border-right: 0px; }
+.buy-clients-cont .title div i { line-height: 24px; float: right; padding: 0px 0px 0px 10px; }
+.buy-clients-cont .title .select { width: 5%; text-align: center; }
+.buy-clients-cont .title .select i { float: none; padding: 0px; }
+.buy-clients-cont .title .name {  width: 17%; }
+.buy-clients-cont .title .age {  width: 6%; }
+.buy-clients-cont .title .genre { width: 7%; }
+.buy-clients-cont .title .dist { width: 7%; }
+.buy-clients-cont .title .avg-spend { width: 10%; }
+.buy-clients-cont .title .total-spend { width: 10%; }
+.buy-clients-cont .title .avg-visits { width: 7%; }
+.buy-clients-cont .title .rate { width: 11%; }
+
+.buy-clients-cont .list:hover div { /*background-color: #f1f1f1; cursor: pointer;*/  }
+.buy-clients-cont .list div { float: left; border-right: 1px solid #f9f9f9; padding: 0px 9px; background-color: #fff; font-size: 12px; line-height: 46px; height: 46px; border-bottom: 1px solid #f9f9f9; }
+.buy-clients-cont .list div:last-child { border-right: 1px solid #f9f9f9; }
+.buy-clients-cont .list .select { width: 5%; text-align: center; }
+.buy-clients-cont .list .select i:hover { cursor: pointer; } 
+.buy-clients-cont .list .name { width: 17%; }
+.buy-clients-cont .list .name span:hover { text-decoration: underline; cursor: pointer; }
+.buy-clients-cont .list .age { width: 6%; text-align: center; }
+.buy-clients-cont .list .genre { width: 7%; }
+.buy-clients-cont .list .genre span:hover { text-decoration: underline; cursor: pointer; }
+.buy-clients-cont .list .dist { width: 7%; text-align: center; }
+.buy-clients-cont .list .avg-spend { width: 10%; text-align: right; }
+.buy-clients-cont .list .total-spend { width: 10%; text-align: right; }
+.buy-clients-cont .list .avg-visits { width: 7%; text-align: center; }
+.buy-clients-cont .list .rate { width: 11%; padding: 0px 20px; text-align: right; }
+.buy-clients-cont .list .rate i { margin: 0px 2px; float: left; line-height: 45px; color: #ececec; }
+.buy-clients-cont .list .rate i.ilu { color: #f3d500; }

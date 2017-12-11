@@ -1,0 +1,11 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 column-chart"> 
+    <filter-menu [filterOptions]="filterOptions"></filter-menu>  
+</section>
+<section class="col-md-10 sales">  
+    <div class="content chart" [ngClass]="{'active': productContent }">
+        <google-chart #cchart [data]="columnChartData"></google-chart>
+    </div>
+    <sales-list></sales-list>
+</section>

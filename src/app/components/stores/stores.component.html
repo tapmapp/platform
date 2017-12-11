@@ -1,0 +1,25 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 map">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="14">
+        <agm-marker *ngFor="let store of stores" [latitude]="store.lat" [longitude]="store.lon"></agm-marker>
+    </agm-map>
+</section>
+<section class="col-md-10 stores">
+    <div class="col-md-4" *ngFor="let store of stores">
+        <div class="store">
+            <div class="name">
+                {{ store.name }}
+            </div>
+            <div class="address">
+                {{ store.address + ', ' + store.postalCode }}
+            </div>
+            <div class="city">
+                {{ store.city + ', ' + store.country }}
+            </div>
+            <div class="phone">
+                {{ store.phone }}
+            </div>
+        </div>
+    </div>
+</section>

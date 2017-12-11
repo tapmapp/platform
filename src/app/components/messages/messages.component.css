@@ -1,0 +1,16 @@
+.messages-cont { background-color: #f9f9f9; display: table; height: calc(100vh - 55px); margin: 55px 0px 0px 0px; padding: 0px; }
+.messages-cont .client-box { border-left: 1px solid #bbb; height: calc(100vh - 55px); }
+.messages-cont .messages-box { height: calc(100vh - 55px); padding: 0px 50px; overflow-y: scroll; }
+.messages-cont .messages-box .messages ul { list-style: none; padding: 0px; }
+.messages-cont .messages-box .messages .day { width: 80%; margin: 30px auto; border-bottom: 1px solid #d4d4d4; text-align: center; padding: 15px 0px; }
+.messages-cont .messages-box .messages ul .merchant { text-align: right; }
+.messages-cont .messages-box .messages ul .merchant .message-box { padding: 7px 10px 7px 10px; display: inline-block; width: 35%; border: 1px solid #b2d29c; background-color: #c5e7ae; border-radius: 5px; text-align: left; }
+.messages-cont .messages-box .messages ul .merchant .message-box .message { display: inline-block; width: 80%; float: left; }
+.messages-cont .messages-box .messages ul .merchant .date { font-size: 12px; float: right; } 
+.messages-cont .messages-box .messages ul .client { text-align: left; }
+.messages-cont .messages-box .messages ul .client .message-box { padding: 7px 10px 7px 10px; display: inline-block; width: 35%; border: 1px solid #d4d4d4; background-color: #efeeee; border-radius: 5px; text-align: left; }
+.messages-cont .messages-box .messages ul .client .message-box .message { display: inline-block; width: 80%; float: left; }
+.messages-cont .messages-box .messages ul .client .date { font-size: 12px; float: right; }
+.chat-box { position: absolute; bottom: 0px; }
+.chat-box textarea { float: left; width: 90%; }
+.chat-box span { width: 10%; float: left; display: inline-block; background-color: #a8da7a; color: white; } 

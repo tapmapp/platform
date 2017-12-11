@@ -1,0 +1,69 @@
+.mobile { height: 100vh; overflow:hidden; }
+.mobile-box { padding: 75px 0px 0px 0px; }
+.mobile .content { background-color: #fff; padding: 55px 30px 0px 0px; }
+.mobile .content .campaign-info { background-color: #fff; padding: 60px 60px 30px 60px; border-right: 1px solid #bbb; overflow-y: scroll; height: 100vh; }
+.mobile .content h2 { margin: 0px 0px 45px 0px; }
+.mobile .content h2 i { margin: 0px 20px 0px 0px; font-size: 32px; float: left; position: relative; bottom: 4px; }
+.mobile .content .mobile-box img { width: 270px; position: fixed; }
+.mobile .content .mobile-info { position: fixed; color: white; }
+.mobile .content .mobile-info .promo-container ul { position: absolute; top: 86px; height: 342px; background-color: #ffffff; left: 21px; width : 228px;}
+.mobile .content .mobile-info .promo-container ul li.active { background-image: url('/assets/img/products/lays-gourmet-row.png'); color: #333; overflow: hidden; padding: 0px 0px; position: relative; cursor: pointer; border-top: 0px; }
+.mobile .content .mobile-info .promo-container ul li.active img { width: 86px; position: relative; float: right; }
+.mobile .content .mobile-info .promo-container ul li.active2 img { width: 86px; position: relative; float: right; }
+.mobile .content .mobile-info .promo-container ul li.active3 img { width: 86px; position: relative; float: right; }
+.mobile .content .mobile-info .promo-container ul li { background-color: #f9f9f9; width: 228px; margin: 0px; height: 20%; color: #333; }
+.mobile .content .mobile-info .promo-container ul li h3 { margin: 10px 0px 5px 0px; padding: 0px; border-top: 0px; font-size: 12px; }
+
+.mobile .content h3 { padding: 35px 0px 10px 0px; border-top: 1px solid #e2e2e2; margin: 20px 0px 0px 0px; }
+.mobile .content h3.first { border-top: 0px; padding: 0px 0px 10px 0px; }
+.mobile .content h3 i { font-size: 18px; position: relative; bottom: 2px; margin: 0px 8px; }
+
+.mobile .content ul { list-style: none; width: 100%; padding: 0px; display: inline-block; }
+.mobile .content ul li { margin: 15px 0px 10px 0px; float: left; width: 33%; padding: 0px 20px 0px 10px; }
+.mobile .content ul li input { line-height: 32px; padding: 2px 9px; border: 1px solid #e2e2e2; outline: -webkit-focus-ring-color auto 0px; width: 100%; }
+.mobile .content ul li input[type=date]::-webkit-inner-spin-button,
+.mobile .content ul li input[type=date]::-webkit-clear-button { -webkit-appearance: none; display: none; }
+.mobile .content ul li input[type=date]::-webkit-calendar-picker-indicator { height: 5px; color: #333;  opacity: 1; }
+.mobile .content ul li input[type=date]::-webkit-calendar-picker-indicator:hover { background-color: #fff; color: #333; height: 5px; }
+
+.mobile .content ul li.desc { width: 100%; }
+.mobile .content ul li.desc textarea { width: 100%; height: 60px; line-height: 24px; padding: 3px 9px; border: 1px solid #e2e2e2; max-width: 100%; min-width: 100%; max-height: 60px; outline: -webkit-focus-ring-color auto 0px; }
+
+.mobile .content .display-cont { height: 38px; }
+.mobile .content .selected-option { line-height: 32px; padding: 2px 9px; border: 1px solid #e2e2e2; font-size: 14px; cursor: pointer; background-color: #fff; }
+.mobile .content .selected-option i { float: right; line-height: 32px; }
+.mobile .content .options-cont { display: none; width: 100%; line-height: 32px; padding: 0px; border: 1px solid #e2e2e2; background-color: white; border-top: 0px; border-bottom: 0px; position: relative; }
+.mobile .content .options-cont.active { display: inherit; }
+.mobile .content .options { background-color: white; width: 100%; padding: 2px 9px; cursor: pointer; border-bottom: 1px solid #e2e2e2; }
+.mobile .content .options:hover { background-color: #f1f1f1; }
+.mobile .content .options span { float: right;}
+
+.mobile .content .create-campaign { text-align: center; }
+.mobile .content .create-campaign span { display: inline-block; padding: 2px 14px; line-height: 32px; background-color: #7abcda; color: white; font-size: 14px; margin: 30px auto; cursor: pointer; }
+
+.add-product-cont li .selected-option { line-height: 32px; padding: 2px 9px; border: 1px solid #e2e2e2; font-size: 14px; cursor: pointer; background-color: #fff; }
+.add-product-cont li .selected-option i { float: right; line-height: 32px; }
+.add-product-cont li .options-cont { display: none; border: 0px; padding: 0px; margin: 0px; }
+.add-product-cont li .options-cont.active { display: inherit; }
+.add-product-cont li .options { background-color: white; margin: 0px; border-top: 0px; }
+.add-product-cont li .options:hover { background-color: #f1f1f1; }
+
+.mobile .content .add-product-cont .search { position: relative; }
+.mobile .content .add-product-cont .search i { position: absolute; top: 10px; left: 12px; font-size: 16px; }
+.mobile .content .add-product-cont .search input { width: 100%; padding: 2px 9px 2px 38px; height: 38px; font-size: 14px; outline: -webkit-focus-ring-color auto 0px; }
+
+.mobile .content .target-avaible-cont { border-top: 1px solid #e2e2e2; }
+.mobile .content .target-avaible-cont h3 { border-top: 0px; padding: 15px 0px 20px 0px; }
+.mobile .content .target-avaible-cont li { margin: 0px; width: 40%; }
+
+.mobile .content .design-cont label { margin-bottom: 10px; }
+.mobile .content .design-cont .select-file { position: relative; line-height: 35px; text-align: center; color: #333333; cursor: pointer; border: 1px solid #e2e2e2; background-color: #fff; }
+.mobile .content .design-cont .select-file div {cursor: pointer; }
+.mobile .content .design-cont .select-file input { opacity: 0; position: absolute; top: 0px; height: 37px; cursor: pointer; }
+.mobile .content .design-cont .preview { float: right; width: 300px; padding: 0px; position: relative; bottom: 34px; text-align: center; line-height: 100px; }
+.mobile .content .design-cont .preview label { position: relative; font-size: 16px; }
+.mobile .content .design-cont .preview div { position: absolute; width: 300px; height: 100px; border: 1px solid #ececec; background-color: #f9f9f9; background-image: url('/assets/img/lines.png'); opacity: 0.4; }
+
+.mobile .content .added-products { padding: 0px 20px 0px 10px; margin: 20px 0px 30px 0px; }
+.mobile .content .added-products ul li { float: left;  width: 100px; }
+.mobile .content .added-products .title li { height: 32px; float: left; border-right: 1px solid #f9f9f9; padding: 4px 9px; font-size: 13px; color: #333333; cursor: pointer; background-color: #ececec; line-height: 24px; }

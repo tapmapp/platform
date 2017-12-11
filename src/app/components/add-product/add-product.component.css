@@ -1,0 +1,22 @@
+.add-product-cont { padding: 0px 0px 0px 30px; height: calc(100vh - 55px); overflow-y: scroll; margin: 55px 0px 0px 0px; }
+.add-product-cont .add-product-info { padding: 55px 30px 60px 30px; }
+.add-product-cont .add-product-info h2 { margin: 0px 0px 30px 0px;}
+.add-product-cont .general-info ul { list-style: none; padding: 0px; width: 100%; display: inline-block; margin: 15px 0px 0px 0px; }
+.add-product-cont .general-info ul li { float: left; width: 33.3%; margin: 0px 0px 15px 0px; }
+.add-product-cont .general-info ul li input { padding: 0px 9px; font-size: 14px; line-height: 38px; }
+
+.display-cont { padding: 0px 30px 0px 0px; }
+.display-cont div { background-color: #fff; padding: 0px 14px 0px 8px; font-size: 14px; border: 1px solid #dfdfdf; line-height: 38px; margin: 1px 0px 0px 0px; cursor: pointer; width: 190px; }
+.display-cont div i { float: right; line-height: 38px; }
+.display-cont .options-cont { display: none; border: 0px; padding: 0px; margin: 0px; max-height: 125px; overflow-y: scroll; }
+.display-cont .options-cont.active { display: inherit; }
+.display-cont .options { background-color: white; margin: 0px; border-top: 0px; }
+.display-cont .options:hover { background-color: #f1f1f1; }
+
+.add-product-img { display: table; background-color: white; padding: 0px; }
+.add-product-img .product-cont { display: table-cell; height: calc(100vh - 55px); width: 100%; background-color: white; border-left: 1px solid #bbb; vertical-align: middle; text-align: center; }
+.add-product-img .product-cont img { width: 300px; }
+
+.add-product-cont .add-product-info .product-info { padding: 0px 0px; width: 100%; display: inline-block;}
+
+.add-product span { background-color: #7abcda; color: white; line-height: 38px; display: inline-block; padding: 0px 10px; }

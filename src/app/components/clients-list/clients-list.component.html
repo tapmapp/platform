@@ -1,0 +1,99 @@
+<div class="clients-cont">
+    <div class="title-content">
+        <ul>
+            <li class="logo">Clients</li>
+            <li>
+                <select-clients-list></select-clients-list>
+            </li>
+        </ul>
+    </div>
+    <div class="title">
+        <div class="image">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="name">
+            Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="genre">
+            Genre <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="age">
+            Age <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="dist">
+            Dist. <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <!--
+        <div class="postalCode">
+            Postal Code <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="name">
+            Residence <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>-->
+        <div class="avg-spend">
+            Avg. Spend <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="total-spend">
+            Total Spend <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="avg-spend">
+            Avg. Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="total-spend">
+            Total Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="avg-visits">
+            Visits <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+        <div class="rate">
+            Client Rate <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="list" *ngFor="let client of clients">
+        <div class="image">
+            <a [routerLink]="['/clients', client.userId]">
+                <img src="http://localhost:3000/img/users/59d22ca3d6477a3c7d5b5c10.jpg">
+            </a>
+        </div>
+        <div class="name">
+            <span (click)="selectUser(client.userId)">{{ client.name }} {{ client.lastName }}</span>
+        </div>
+        <div class="genre">
+            <span (click)="selectGenre(client.genre)">{{ client.genre }}</span>
+        </div>
+        <div class="age">
+            {{ client.age }}
+        </div>
+        <div class="dist">
+            {{ client.distance }}
+        </div>
+        <!--
+        <div class="postalCode">
+            {{ client.postalCode }}
+        </div>
+        <div class="name">
+            {{ client.city + ', ' + client.country }}
+        </div>
+        -->
+        <div class="avg-spend">
+            {{ (client.totalSpend / client.visits).toFixed(2) }} €
+        </div>
+        <div class="total-spend">
+            {{ client.totalSpend.toFixed(2) }} €
+        </div>
+        <div class="total-spend">
+            {{ (client.totalProfit / client.visits).toFixed(2) }} €
+        </div>
+        <div class="total-spend">
+            {{ client.totalProfit.toFixed(2) }} €
+        </div>
+        <div class="avg-visits">
+            {{ client.visits }}
+        </div>
+        <div class="rate">
+            <i class="fa fa-star ilu" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [client.rate]"></i>
+            <i class="fa fa-star" aria-hidden="true" *ngFor="let key of keys | ratesPipe: [5 - client.rate]"></i>
+        </div>
+    </div>
+</div>

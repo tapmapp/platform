@@ -1,0 +1,12 @@
+/* HEADER */
+nav { height: 55px; padding: 0px 15px; background-color: #7bbcda; position: fixed; width: 100%; z-index: 100; border-bottom: 1px solid #59aed6; }
+nav a, nav a:hover { text-decoration: none; color: white; font-size: 12px; }
+nav .logo { padding: 0px; font-size: 16px; float: left; margin: 0px; margin-left: 40px; position: relative; bottom: 3px; }
+nav .logo a { font-size: 21px; line-height: 55px; color: white; font-weight: 400; letter-spacing: 2px; }
+nav .client-type {float: left;}
+nav .client-type li {float: left; list-style: none; padding: 0px; color: white; line-height: 55px; margin: 0px 10px; }
+nav .menu { float: right; line-height: 55px; color: white; margin-right: 8.3%; }
+nav .menu ul { list-style: none; padding: 0px; }
+nav .menu ul li { float: left; margin: 0px 10px; }
+nav .menu ul li i { color: #53859c; font-size: 18px; cursor: pointer; }
+/* END HEADER */

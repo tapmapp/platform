@@ -1,0 +1,127 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 campaigns">
+    <div class="chart-content chart">
+        <google-chart [data]="columnChartData"></google-chart>
+    </div>
+    <div class="content">
+        <div class="col-md-12 box">
+            <div class="box-content">
+                <h2>
+                    Campaigns 
+                    <span><i class="fa fa-plus" aria-hidden="true"></i> Create</span>
+                    <span><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
+                    <span><i class="fa fa-times" aria-hidden="true"></i> Delete</span>
+                </h2>
+                <div class="product-cont">
+                    <div class="title">
+                        <div class="media">
+                            Type <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="name">
+                            Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="name">
+                            Promotion <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="name">
+                            Clients List <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="date">
+                            Start <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="date">
+                            Finish <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="date">
+                            Reach <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="date">
+                            Used <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="profit">
+                            Profit <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="costs">
+                            Cost <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="state">
+                            State
+                        </div>
+                    </div>
+
+                    <div class="list" *ngFor="let product of products">
+                        <div class="media">
+                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                        </div>
+                        <div class="name">
+                            asd
+                        </div>
+                        <div class="name">
+                            ads
+                        </div>
+                        <div class="name">
+                            ads
+                        </div>
+                        <div class="date">
+                            ads
+                        </div>
+                        <div class="date">
+                            asd
+                        </div>
+                        <div class="date">
+                            85%
+                        </div>
+                        <div class="date">
+                            12%
+                        </div>
+                        <div class="profit">
+                            6
+                        </div>
+                        <div class="costs">
+                            3
+                        </div>
+                        <div class="state">
+                            <i class="fa fa-pause" aria-hidden="true" (click)="campaignState()"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--
+        <div class="col-md-3 box categories">
+            <h2>
+                Lists 
+                <span (click)="showHideCreateClientsList()" [ngClass]="{ active: createListState }"><i class="fa fa-plus" aria-hidden="true"></i> Create</span>
+                <span><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
+                <span><i class="fa fa-times" aria-hidden="true"></i> Delete</span>
+            </h2>
+            <div class="box-content new-clients-list" [ngClass]="{ active: createListState }">
+                <input type="text" [(ngModel)]="newClientList" placeholder="Clients List Name"><span class="create-clients-list" (click)="newClientsList()">Create List</span>
+            </div>
+            <div class="box-content">
+                <div class="categories-cont">
+                    <div class="title">
+                        <div class="name">
+                            List Name <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="items">
+                            Nº Clients <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="list" *ngFor="let clientsList of clientsLists">
+                        <div class="name">
+                            {{ clientsList.name }}
+                        </div>
+                        <div class="items">
+                            {{ clientsList.number }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+    </div>
+</section>

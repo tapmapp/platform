@@ -1,0 +1,7 @@
+.chart-category-cont { padding: 55px 0px 0px 0px; border-bottom: 1px solid #bbb; background-color: white; }
+.chart-category-cont .chart { width: 70%; float: left; height: 330px; }
+.chart-category-cont .chart2 { width: 30%; float: left; height: 330px; }
+
+.add-category-cont ul { padding: 0px; list-style: none; }
+.add-category-cont ul li { float: left; }
+.add-category-cont .add-category input { width: 200px; color: #333; line-height: 42px; }

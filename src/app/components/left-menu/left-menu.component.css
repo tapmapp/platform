@@ -1,0 +1,32 @@
+.menu { padding-top: 55px; background-color: white; z-index: 10; height: 100%; border-right: 1px solid #bbb; }
+.menu .main-menu { list-style: none; padding-top: 55px; position: fixed; }
+.menu .main-menu li { color: #5d5d5d; margin: 5px 0px; }
+.menu .main-menu li a { color: #666; }
+.menu .main-menu li a:hover { text-decoration: none; }
+.menu .main-menu li a.active { background-color: transparent; color: #7abcda; font-weight: bold; }
+
+.menu .main-menu .campaign-menu { list-style: none; display: none; }
+.menu .main-menu .clients-menu { list-style: none; display: none; }
+.menu .main-menu .products-menu { list-style: none; display: none; }
+.menu .main-menu .stores-menu { list-style: none; display: none; }
+
+/* CAMPAIGN MENU */
+.menu .main-menu a.active + .campaign-menu { display: inherit; } 
+.menu .main-menu .campaign-menu { list-style: none; display: none; padding: 2px 0px 10px 15px; font-size: 13px; }
+.menu .main-menu .campaign-menu li { cursor: pointer; }
+.menu .main-menu .campaign-menu li span { display: inline-block; text-align: center; width: 30px; }
+.menu .main-menu .campaign-menu li i { margin: 0px 10px; }
+
+/* PRODUCTS MENU */
+.menu .main-menu a.active + .products-menu { display: inherit; } 
+.menu .main-menu .products-menu { list-style: none; display: none; padding: 2px 0px 10px 15px; font-size: 13px; }
+.menu .main-menu .products-menu li { cursor: pointer; }
+.menu .main-menu .products-menu li span { display: inline-block; text-align: center; width: 30px; }
+.menu .main-menu .products-menu li i { margin: 0px 10px; }
+
+/* PRODUCTS MENU */
+.menu .main-menu a.active + .clients-menu { display: inherit; } 
+.menu .main-menu .clients-menu { list-style: none; display: none; padding: 2px 0px 10px 15px; font-size: 13px; }
+.menu .main-menu .clients-menu li { cursor: pointer; }
+.menu .main-menu .clients-menu li span { display: inline-block; text-align: center; width: 30px; }
+.menu .main-menu .clients-menu li i { margin: 0px 10px; }

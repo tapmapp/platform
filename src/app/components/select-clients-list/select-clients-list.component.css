@@ -1,0 +1,22 @@
+.select-clients-list-cont { position: absolute; top: 23px; }
+.select-clients-list-cont .display-cont { line-height: 32px; width: 160px; float: left; display: inline-block; }
+.select-clients-list-cont .display-cont .selected-option { line-height: 24px; padding: 2px 9px; border: 1px solid #e2e2e2; font-size: 12px; cursor: pointer; background-color: #fff; }
+.select-clients-list-cont .display-cont .selected-option i { float: right; line-height: 24px; }
+.select-clients-list-cont .display-cont .options-cont { display: none; width: 100%; line-height: 24px; padding: 0px; border: 1px solid #e2e2e2; background-color: white; border-top: 0px; border-bottom: 0px; position: relative; }
+.select-clients-list-cont .display-cont .options-cont.active { display: inherit; }
+.select-clients-list-cont .display-cont .options { background-color: white; width: 100%; padding: 2px 9px; cursor: pointer; border-bottom: 1px solid #e2e2e2; font-size: 12px; }
+.select-clients-list-cont .display-cont .options:hover { background-color: #f1f1f1; }
+.select-clients-list-cont .display-cont .options span { float: right; font-size: 12px; }
+
+.select-clients-list-cont .add-clients-list { float: left; height: 30px; line-height: 28px; }
+.select-clients-list-cont .add-clients-list span { 
+    display: inline-block;
+    color: white;
+    background-color: #e2e2e2;
+    height: 30px;
+    width: 50px;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+ }
+.select-clients-list-cont .add-clients-list span.active { background-color: #7abcda; }

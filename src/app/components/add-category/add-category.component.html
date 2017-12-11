@@ -1,0 +1,28 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 chart-category-cont">
+    <div class="content">
+        <div class="chart-content chart">
+            <google-chart [data]="columnChartData"></google-chart>
+        </div>
+
+        <div class="chart-content chart2">
+            <google-chart [data]="pieChartData"></google-chart>
+        </div>
+    </div>
+</section>
+<section class="col-md-10 add-category-cont">
+    <div class="col-md-8">
+        <h2>Add Category</h2>
+        <div class="add-category">
+            <ul>
+                <li><input type="text"></li>
+                <li><span>Add</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+        <h2>Categories</h2>
+        <categories-list></categories-list>
+    </div>
+</section>

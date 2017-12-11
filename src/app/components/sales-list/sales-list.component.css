@@ -1,0 +1,87 @@
+.sales-list-cont { padding: 20px 30px 20px 30px; }
+.sales-list-cont .title-content ul { list-style: none; padding: 0px; width: 100%; height: 55px; }
+.sales-list-cont .title-content ul .logo { float: left; font-size: 30px; margin: 0px 30px 0px 0px; }
+.sales-list-cont .title-content ul .filter-by { float: left; margin: 0px 0px 0px 25px; line-height: 45px; color: #bbb; cursor: pointer; }
+.sales-list-cont .title-content ul .filter-by.active { color: #333; }
+.sales-list-cont .title-content ul .total { float: right; margin: 0px 0px 0px 30px; line-height: 45px; }
+.sales-list-cont .title-content ul .total span { font-weight: bold; }
+.sales-list-cont .title-content ul .total .profit { color: #41a743; }
+
+.sales-list-cont .box-content .title { width: 100%; border: 0px; height: 32px; }
+.sales-list-cont .box-content .title div { height: 32px; float: left; border-right: 1px solid #f9f9f9; padding: 4px 9px; font-size: 13px; color: #333333; cursor: pointer; background-color: #ececec; line-height: 24px; }
+.sales-list-cont .box-content .title div i { line-height: 24px; float: right; padding: 0px 0px 0px 10px; }
+.sales-list-cont .box-content .title .id { width: 4%; text-align: center; }
+.sales-list-cont .box-content .title .id i { float: none; padding: 0px; }
+.sales-list-cont .box-content .title .store { width: 13%; }
+.sales-list-cont .box-content .title .store.tickets { width: 16%; text-align: left; }
+.sales-list-cont .box-content .title .name {  width: 12%; }
+.sales-list-cont .box-content .title .genre {  width: 8%; }
+.sales-list-cont .box-content .title .client {  width: 16%; }
+.sales-list-cont .box-content .title .client i { padding: 0px 5px 0px 2px; }
+.sales-list-cont .box-content .title .brand { width: 10%; }
+.sales-list-cont .box-content .title .categorie { width: 8%; }
+.sales-list-cont .box-content .title .sale-price { width: 7%; }
+.sales-list-cont .box-content .title .total-price { width: 8%; }
+.sales-list-cont .box-content .title .total { width: 7%; }
+.sales-list-cont .box-content .title .units { width: 6%; }
+.sales-list-cont .box-content .title .date { width: 13%; }
+.sales-list-cont .box-content .title .rate { width: 13%; }
+.sales-list-cont .box-content .title .method { width: 8%; }
+
+.sales-list-cont .box-content .content { height: 362px; overflow-y: scroll; }
+.sales-list-cont .box-content .list div { float: left; border-right: 1px solid #f9f9f9; padding: 0px 9px; background-color: #fff; font-size: 12px; line-height: 42px; border-bottom: 1px solid #f9f9f9; height: 42px; overflow:hidden;}
+.sales-list-cont .box-content .list div:last-child { border-right: 1px solid #f9f9f9; }
+.sales-list-cont .box-content .list .id { width: 4%; text-align: center; font-size: 10px; }
+.sales-list-cont .box-content .list .id i { cursor: pointer; }
+.sales-list-cont .box-content .list .id a { color: #333; }
+.sales-list-cont .box-content .list .id i.active { color: #7abcda; font-size: 16px; line-height: 42px; }
+.sales-list-cont .box-content .list .store { width: 13%; overflow: hidden; height: 42px; }
+.sales-list-cont .box-content .list .store.tickets { width: 16%; overflow: hidden; height: 42px; text-align: left; }
+.sales-list-cont .box-content .list .store.tickets span:hover { cursor: pointer; text-decoration: underline; }
+.sales-list-cont .box-content .list .name { width: 12%; }
+.sales-list-cont .box-content .list .genre { width: 8%; }
+.sales-list-cont .box-content .list .genre span:hover { cursor: pointer; text-decoration: underline; }
+.sales-list-cont .box-content .list .client { width: 16%; }
+.sales-list-cont .box-content .list .client span:hover { cursor: pointer; text-decoration: underline; }
+.sales-list-cont .box-content .list .client i { float: none; padding: 0px 5px 0px 2px; }
+.sales-list-cont .box-content .list .brand { width: 10%; }
+.sales-list-cont .box-content .list .categorie { width: 8%; }
+.sales-list-cont .box-content .list .sale-price { width: 7%; text-align: right; }
+.sales-list-cont .box-content .list .units { width: 6%; text-align: center; }
+.sales-list-cont .box-content .list .total { width: 7%; text-align: right; }
+.sales-list-cont .box-content .list .total-price { width: 8%; text-align: right; }
+.sales-list-cont .box-content .list .total-price.profit { color: #41a743; }
+.sales-list-cont .box-content .list .date { width: 13%; text-align: center; }
+.sales-list-cont .box-content .list .rate { width: 13%; text-align: center; }
+.sales-list-cont .box-content .list .rate { width: 13%; padding: 0px 10px; text-align: center; }
+.sales-list-cont .box-content .list .rate i { margin: 0px 2px; line-height: 45px; color: #ececec; }
+.sales-list-cont .box-content .list .rate i.ilu { color: #f3d500; }
+.sales-list-cont .box-content .list .method { width: 8%; padding: 0px 10px; line-height: 42px; text-align: center; }
+
+.sales-list-cont .box-content .list .sales-container { width: 100%; border: 1px solid #dedede; border-right: 1px solid #dedede !important; height: inherit; padding: 0px 0px 10px 0px; background-color: #f9f9f9; display: none; }
+.sales-list-cont .box-content .list .sales-container.active { display: inherit; }
+.sales-list-cont .box-content .list .sales-container ul { list-style: none; margin: 0px 0px 0px 0px; width: 100%; padding: 0px 0px 0px 0px; height: 40px; line-height: 40px; display: flex; }
+.sales-list-cont .box-content .list .sales-container ul li {float: left; }
+
+.sales-list-cont .box-content .list .sales-container .title { border-bottom: 1px solid #dedede; padding: 0px 0px 0px 0px; margin: 10px 0px 5px 10px; width: 98%; }
+.sales-list-cont .box-content .list .sales-container .title .product-name { width: 16%; padding: 0px; }
+.sales-list-cont .box-content .list .sales-container .title .product-category { width: 24%; padding: 0px 0px 0px 5px; }
+.sales-list-cont .box-content .list .sales-container .title .product-price { text-align: right; padding: 0px 10px; }
+.sales-list-cont .box-content .list .sales-container .title .product-profit { width: 8%; text-align: right; padding: 0px 7px; }
+.sales-list-cont .box-content .list .sales-container .title .rate { width: 14%; padding: 0px 10px; text-align: center; }
+.sales-list-cont .box-content .list .sales-container .title .comments { color: #333; padding: 0px 9px; width: 50px; text-align: center; }
+
+.sales-list-cont .box-content .list .sales-container .discount { width: 4%; text-align: center; }
+.sales-list-cont .box-content .list .sales-container .product-name { width: 17%; padding: 0px 0px 0px 10px; }
+.sales-list-cont .box-content .list .sales-container .product-name span:hover { text-decoration: underline; cursor: pointer; }
+.sales-list-cont .box-content .list .sales-container .product-category { width: 23%; }
+.sales-list-cont .box-content .list .sales-container .product-category span:hover { text-decoration: underline; cursor: pointer; }
+.sales-list-cont .box-content .list .sales-container .product-units { width: 6%; padding: 0px 5px; text-align: center; }
+.sales-list-cont .box-content .list .sales-container .product-price { width: 8%; text-align: right; padding: 0px 10px; }
+.sales-list-cont .box-content .list .sales-container .product-profit { width: 8%; text-align: right; padding: 0px 10px; }
+.sales-list-cont .box-content .list .sales-container .rate { width: 13%; padding: 0px 10px; text-align: center; }
+.sales-list-cont .box-content .list .sales-container .rate i { margin: 0px 2px; line-height: 45px; color: #ececec; }
+.sales-list-cont .box-content .list .sales-container .rate i.ilu { color: #f3d500; }
+.sales-list-cont .box-content .list .sales-container .comments { color: #333; padding: 0px 9px; width: 50px; text-align: center; }
+.sales-list-cont .box-content .list .method { width: 8%; padding: 0px 10px; line-height: 42px; text-align: center; }
+.sales-list-cont .box-content .list .method i { cursor: pointer; }

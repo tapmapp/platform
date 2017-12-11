@@ -1,0 +1,37 @@
+.cashier-cont { background-color: #f9f9f9; display: table; height: calc(100vh - 55px); margin: 55px 0px 0px 0px; padding: 0px; }
+.cashier-cont .items-box { border-right: 1px solid #bbb; padding: 0px; background-color: #f9f9f9; margin: 55px 0px 0px 0px; border-top: 1px solid #bbb; height: calc(100% - 55px);}
+.cashier-cont .items-box .product-cont { color: #333; font-size: 24px; text-align: center; height: calc(100% - 134px); display: table; width: 100%; overflow-y: scroll; }
+.cashier-cont .items-box .product-cont .no-items-content { display: table-cell; vertical-align: middle; color: #bbbbbb; }
+.cashier-cont .items-box .product { line-height: 80px; height: 80px; border-bottom: 1px solid #e8e8e8; background-color: #fff; font-size: 14px; }
+.cashier-cont .items-box .product .less { float: left; cursor: pointer; color: #bbb; }
+.cashier-cont .items-box .product .add { float: right; cursor: pointer; color: #bbb; }
+
+.cashier-cont .items-box .product:first-child { border-top: 0px; }
+.cashier-cont .items-box .product ul { padding: 0px 15px; }
+.cashier-cont .items-box .product ul li { float: left; list-style: none; }
+.cashier-cont .items-box .product .name { width: 50%; text-align: left; }
+.cashier-cont .items-box .product .items { width: 15%; text-align: center; }
+.cashier-cont .items-box .product .price { width: 15%; text-align: right; }
+.cashier-cont .items-box .product .total { width: 20%; text-align: right; }
+
+.cashier-cont .check-cont { position: absolute; bottom: 0px; width: 100%; border-top: 1px solid #bbb; }
+.cashier-cont .totalAmount { text-align: right; padding: 0px 9px; line-height: 60px; background-color: #fff; }
+.cashier-cont .totalAmount span:first-child { font-size: 16px; padding: 0px 10px 0px 0px; font-weight: normal; }
+.cashier-cont .totalAmount span { font-weight: bold; font-size: 18px; }
+.cashier-cont .check-out { background-color: #84da7a; color: white; line-height: 90px; text-align: center; font-size: 24px; cursor: pointer; }
+
+.cashier-cont .categories-box { padding: 0px; border-bottom: 1px solid #bbb; }
+.cashier-cont .categories-box ul { list-style: none; padding: 0px; position: relative; top: 1px; }
+.cashier-cont .categories-box ul li { background-color: #fff; border-radius: 5px 5px 0px 0px; border: 1px solid #bbb; float: left; padding: 7px 9px; width: 90px; text-align: center; cursor: pointer; margin: 19px 0px 0px 10px; border-bottom: 1px solid #bbb; color: #ababab; }
+.cashier-cont .categories-box ul li.active { border-bottom: 1px solid white; color: #333; }
+
+.cashier-cont .products-box { padding: 0px; height: calc(100% - 57px); border-right: 1px solid #bbb; overflow-y: scroll; }
+
+.cashier-cont .products-box div { list-style: none; width: 100%; background-color: white; border-bottom: 1px solid #e8e8e8; height: 80px; cursor: pointer; }
+.cashier-cont .products-box .product ul { padding: 0px 10px; list-style: none; }
+.cashier-cont .products-box .product ul li { float: left; line-height: 80px; padding: 0px 15px 0px 0px; }
+.cashier-cont .products-box .product .img { width: 15%; text-align: center; }
+.cashier-cont .products-box .product .img img { width: 62px; }
+.cashier-cont .products-box .product .product-name { width: 20%; }
+.cashier-cont .products-box .product .product-brand { width: 20%; }
+.cashier-cont .products-box .product .product-price { width: 20%; }

@@ -1,0 +1,58 @@
+<header-comp></header-comp>
+<left-menu></left-menu>
+<section class="col-md-10 client-info">
+    <div class="col-md-3">
+        <ul *ngFor="let clientInfo of clientInfo">
+            <li class="profile-img">
+                <img src="http://localhost:3000/img/users/{{clientInfo.img}}">
+                <span class="write-message"><i class="fa fa-comments" aria-hidden="true"></i></span>
+            </li>
+            <li>
+                <span>Name:</span> {{ clientInfo.name }} {{ clientInfo.lastName }}
+            </li>
+            <li>
+                <span>Genre:</span> {{ clientInfo.genre }}
+            </li>
+            <li>
+                <span>Date of Birth:</span> {{ clientInfo.dateBirth }}
+            </li>
+            <li>
+            <span>Postal Code:</span> {{ clientInfo.postalCode }}
+            </li>
+            <li>
+            <span>City:</span> {{ clientInfo.city }}
+            </li>
+            <li>
+            <span>Country:</span> {{ clientInfo.country }}
+            </li>
+            <li>
+            <span>Created:</span> <span class="date">{{ clientInfo.created | date: 'dd-MM-yyyy' }}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-8 col-md-offset-1 client-sales">
+        <h2>Client Sales</h2>
+    </div>
+</section>
+
+<!--
+
+{ "_id" : ObjectId("59d22ca3d6477a3c7d5b5c10"), 
+"email" : "frrocaguilar@gmail.com", 
+"name" : "Francisco", 
+"lastName" : "Roca", 
+"address" : "Agastia", 
+"postalCode" : "28043", 
+"city" : "Madrid", 
+"country" : "Spain", 
+"dateBirth" : "1986-05-18", 
+"genre" : "Male", 
+"password" : "password", 
+"status" : true, 
+"created" : ISODate("2017-10-02T12:10:11.843Z"), 
+"__v" : 0, 
+"addressNumber" : "74", 
+"lat" : "40.449666", 
+"long" : "-3.654132" }
+
+    -->

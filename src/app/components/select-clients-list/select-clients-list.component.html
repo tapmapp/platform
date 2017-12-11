@@ -1,0 +1,11 @@
+<div class="select-clients-list-cont">
+    <div class="display-cont">
+        <div class="selected-option" (click)="showHideClientsList()">{{ selectedClientsList }} <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+        <div class="options-cont" [ngClass]="{ active: clientsListState }">
+            <div class="options" *ngFor="let clientsList of clientsLists" (click)="selectClientsList(clientsList.name + ' (' + clientsList.number + ')', clientsList._id)"> {{ clientsList.name }} <span>({{ clientsList.number }})</span></div>
+        </div>
+    </div>
+    <div class="add-clients-list">
+        <span [ngClass]="{ active: selectedClientsListId != ''}">Add</span>
+    </div>
+</div>
